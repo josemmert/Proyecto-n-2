@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Grupo 6" />
+    <meta name="description" content="Segundo Proyecto" />
+    <meta name="keyboard" content="js" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <title>Techcode</title>
+  </head>
+  <body>
+    <header class="position-sticky">
+      <nav class="navbar navbar-light bg-secondary navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="img/IMG-20240103-WA0048.jpg"
+              alt="Techcode"
+              width="70"
+              height="70"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
+            id="navbarNav"
+          >
+            <div
+              class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Acerca de Nosotros</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="navbar-nav">
+              <li class="nav-item d-none">
+                <a class="nav-link" href="#">Administracion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login-register.html?action=login"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login-register.html?action=register"
+                  >Sign in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="container row mx-auto my-4">
+        <article class="col-12 col-sm-6 my-auto p-2" id="formLogin">
+          <h2 class="text-center">Login</h2>
+          <form class="d-flex flex-column">
+            <label for="emailLogin">Correo:</label>
+            <input
+              type="email"
+              name="emailLogin"
+              id="emailLogin"
+              placeholder="Ingresar el correo"
+              minlength="8"
+              maxlength="60"
+              class="mb-3"
+              required
+            />
+            <label for="passwordLogin">Contraseña:</label>
+            <input
+              type="password"
+              name="passwordLogin"
+              id="passwordLogin"
+              placeholder="Ingresar la contraseña"
+              minlength="8"
+              maxlength="16"
+              required
+              pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
+            />
+            <input
+              type="submit"
+              value="Login"
+              class="w-25 my-4 btn btn-primary"
+            />
+          </form>
+        </article>
+        <article class="col-12 col-sm-6 text-center" id="imgLogin">
+          <img src="../img/login.png" alt="" class="img-fluid w-75 mx-auto" />
+        </article>
+        <article class="col-12 col-sm-6 text-center d-none" id="imgRegister">
+          <img src="../img/login.png" alt="Icono de login" />
+        </article>
+        <article class="col-12 col-sm-6 my-auto p-2 d-none" id="formRegister">
+          <h2 class="text-center">Registro</h2>
+          <form class="d-flex flex-column">
+            <label for="nameRegister">Nombre completo:</label>
+            <input
+              type="text"
+              name="nameRegister"
+              id="nameRegister"
+              placeholder="Ingresar el nombre completo"
+              minlength="7"
+              maxlength="60"
+              required
+              class="mb-3"
+            />
+            <label for="emailRegister">Correo:</label>
+            <input
+              type="email"
+              name="emailRegister"
+              id="emailRegister"
+              placeholder="Ingresar el correo "
+              minlength="8"
+              maxlength="60"
+              required
+              class="mb-3"
+            />
+            <label for="passwordRegister">Contraseña:</label>
+            <input
+              type="password"
+              name="passwordRegister"
+              id="passwordRegister"
+              placeholder="Ingresar contraseña"
+              minlength="8"
+              maxlength="16"
+              required
+              pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
+              class="mb-3"
+            />
+            <label for="passwordRegister2">Repetir contraseña:</label>
+            <input
+              type="password"
+              name="passwordRegister2"
+              id="passwordRegister2"
+              placeholder="Ingresar contraseña"
+              minlength="8"
+              maxlength="16"
+              required
+              pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
+            />
+            <input
+              type="submit"
+              value="Registar"
+              class="w-25 my-4 btn btn-primary"
+            />
+          </form>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="../js/login-register.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+  </body>
+</html>
