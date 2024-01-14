@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content=">Grupo6 80i" />
+    <meta name="description" content="Proyecto JavaScript" />
+    <meta name="keywords" content="html, css3, bootstrap, pages, javascript, etc" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Administracion</title>
+</head>
+<body>
+    <header></header>
+    <main class="container-fluid">
+        <section class="my-5 text-center titleoff">
+            <h2 id="titulo">ADMINISTRACION DE PRODUCTOS</h2>
+            <hr>
+        </section>
+        <div class="container">
+            <h3>CARGAR NUEVO PRODUCTO</h3>
+        </div>
+        <section class="container">
+            <form>
+                <div class="my-3">
+                    <label for="codigo" class="form-label">Codigo</label>
+                    <input id="codigo" type="text" class="form-control" minlength="1" maxlength="100" required>
+                </div>
+                <div class="my-3">
+                    <label for="marca" class="form-label">Marca</label>
+                    <select id="marca" class="form-select">
+                    <option selected>Motorola</option>
+                    <option>Samsung</option>
+                    <option>Iphone</option>
+                    <option>Otro</option>
+                    </select>
+                </div>
+                <div class="my-3">
+                    <label for="modelo" class="form-label">Modelo</label>
+                    <input id="modelo" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese el modelo" required>
+                </div>
+                <div class="my-3">
+                    <label for="pantalla" class="form-label">Pantalla</label>
+                    <input id="pantalla" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese el tamaño de la pantalla del dispositivo" required>
+                </div>
+                <div class="my-3">
+                    <label for="memoria" class="form-label">Memoria</label>
+                    <input id="memoria" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese la memoria RAM del dispositivo" required>
+                </div>
+                <div class="my-3">
+                    <label for="almacenamiento" class="form-label">Almacenamiento</label>
+                    <input id="almacenamiento" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese la capacidad de almacenamiento del dispositivo" required>
+                </div>
+                <div class="my-3">
+                    <label for="descripcion" class="form-label">Descripcion</label>
+                    <textarea id="descripcion" type="text" class="form-control" placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="200" required rows="3"></textarea>
+                </div>
+                <div class="my-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input id="precio" type="text" class="form-control" placeholder="Ingrese el precio del producto" minlength="1" maxlength="50" required>
+                </div>
+                <div class="my-3">
+                    <label for="imagen" class="form-label">URL Imagen del producto</label>
+                    <input id="imagen" type="text" class="form-control" placeholder="Ingrese la URL de la imagen" minlength="1" maxlength="200" required>
+                </div>
+                <div class="my-3">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input id="stock" type="text" class="form-control"  minlength="1" maxlength="200" required>
+                </div>
+                <button class="btn btn-2 my-3" type="submit">Guardar</button>
+            </form>
+            <button type="button" class="btn btn-2">Nuevo</button>
+        </section>
+        <hr>
+        <section class="container-fluid my-3">
+            <h2 class="titleoff text-center">LISTADO DE PRODUCTOS</h2>
+            <article class="container mt-4">
+                <h3 class="container">EDITAR Y ELIMINAR PRODUCTOS</h3>
+                <div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Pantalla</th>
+                            <th scope="col">Memoria</th>
+                            <th scope="col">Almacenamiento</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Url Imagen</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Motorola</td>
+                            <td>Edge 40 Pro</td>
+                            <td>6.5''</td>
+                            <td>8 GB</td>
+                            <td>128 GB</td>
+                            <td>$175000</td>
+                            <td>https://www.xataka.com/moviles/motorola-edge-40-caracteristicas-precio-ficha-tecnica</td>
+                            <td>3</td>
+                            <td>
+                                <button type="button" class="btn btn-warning mx-1">Editar</button>
+                                <button type="button" class="btn btn-danger mx-1">Eliminar</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </article>
+        </section>
+        <section class="container-fluid my-3">
+            <h2 class="titleoff text-center">REGISTRO DE USUARIOS</h2>
+            <article class="container mt-4">
+                <h3>EDITAR Y ELIMINAR USUARIOS</h3>
+                <div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre de Usuario</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Rol</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">anonimo</th>
+                            <td>anonimo@gmail.com</td>
+                            <td>123456789</td>
+                            <td>Invitado</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos quibusdam cupiditate delectus numquam distinctio. Dicta veniam minus dolorem qui expedita eligendi perspiciatis ducimus, optio pariatur ad quos delectus. Hic, corporis.
+        Error dolores provident hic quos molestiae fugiat sed distinctio, officiis ea eaque et veniam. Quae mollitia beatae nulla explicabo delectus aliquid? Repudiandae ex est perferendis autem mollitia ullam, debitis amet?
+        Rerum voluptatibus provident, molestiae alias ducimus, inventore dignissimos fugiat vitae libero optio quia dolores dolorum iusto amet quidem autem exercitationem beatae nihil corrupti cumque voluptates, minus sit! Cum, aspernatur debitis.
+        </p>
+    </footer>
+    
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
