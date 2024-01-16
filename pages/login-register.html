@@ -86,7 +86,7 @@
               placeholder="Ingresar el correo"
               minlength="8"
               maxlength="60"
-              class="mb-3"
+              class="mb-3 form-control"
               required
             />
             <label for="passwordLogin">Contraseña:</label>
@@ -99,13 +99,20 @@
               maxlength="16"
               required
               pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
+              class="form-control"
             />
             <div>
               <input type="submit" value="Login" class="my-4 btn btn-primary" />
             </div>
           </form>
           <div class="mb-3">
-            <a href="#">Recuperar contraseña</a>
+            <button
+              type="button"
+              onclick="passwordRecover()"
+              class="btn btn-outline-secondary"
+            >
+              Recuperar contraseña
+            </button>
           </div>
           <div>
             <h4 class="text-center mb-3">Loguearse con:</h4>

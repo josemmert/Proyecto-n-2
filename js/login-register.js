@@ -42,11 +42,10 @@ if (action === "register") {
       if (listUsers.find((user) => user.email === emailRegister.value)) {
         emailRegister.className = `mb-3 form-control is-invalid`;
         Swal.fire({
-          icon: "error",
-          title: "Error",
+          imageUrl: "../img/error.png",
           text: "El correo ya existe, intenta de nuevo con otro correo.",
           confirmButtonColor: "#0d6efd",
-          iconColor: "#dc3545",
+          color: "#212121",
         });
       } else {
         const user = {
@@ -59,6 +58,7 @@ if (action === "register") {
         Swal.fire({
           position: "top-center",
           icon: "success",
+          color: "#212121",
           title: "Se realizo el registro con exito.",
           showConfirmButton: false,
           timer: 1500,
@@ -70,11 +70,10 @@ if (action === "register") {
       }
     } else {
       Swal.fire({
-        icon: "error",
-        title: "Error",
+        imageUrl: "../img/error.png",
         text: "No se pudo realizar el registro, intenta de nuevo.",
         confirmButtonColor: "#0d6efd",
-        iconColor: "#dc3545",
+        color: "#212121",
       });
     }
   });
@@ -110,6 +109,7 @@ if (action === "login") {
       sessionStorage.setItem("userLog", JSON.stringify(userLog));
       Swal.fire({
         position: "top-center",
+        color: "#212121",
         icon: "success",
         title: `Bienvenido ${userLog.nombre}`,
         showConfirmButton: false,
@@ -120,13 +120,48 @@ if (action === "login") {
       }, 1500);
     } else {
       Swal.fire({
-        icon: "error",
-        title: "Error",
+        imageUrl: "../img/error.png",
         text: "Correo y/o contraseña incorrecta.",
         confirmButtonColor: "#0d6efd",
-        iconColor: "#dc3545",
+        color: "#212121",
       });
     }
   });
 }
 //---------------FIN LOGIN---------------------------------
+
+window.passwordRecover = function () {
+  Swal.fire({
+    title: "Recupero de contraseña.",
+    input: "email",
+    inputAttributes: {
+      autocapitalize: "off",
+    },
+    showCancelButton: true,
+    confirmButtonText: "Recuperar",
+    showLoaderOnConfirm: false,
+    confirmButtonColor: "#0d6efd",
+    inputPlaceholder: "Ingresa tu correo electrónico",
+    cancelButtonText: "Cancelar",
+    color: "#212121",
+  });
+  let buttonError = document.getElementsByClassName(
+    "swal2-confirm swal2-styled swal2-default-outline"
+  );
+  buttonError.innerHTML = `
+  <button
+  type="button"
+  onclick="errorLink()"
+  class="swal2-confirm swal2-styled swal2-default-outline"
+  aria-label=""
+  style="display: inline-block; background-color: rgb(13, 110, 253);"
+  
+>
+  Recuperar
+</button>;
+  `;
+  function errorLink() {
+    window.location.replace("../index.html");
+    console.log("si ingresa a la funcion");
+  }
+};
