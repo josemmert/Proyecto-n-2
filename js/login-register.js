@@ -144,24 +144,9 @@ window.passwordRecover = function () {
     inputPlaceholder: "Ingresa tu correo electrónico",
     cancelButtonText: "Cancelar",
     color: "#212121",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.replace("../index.html");
+    }
   });
-  let buttonError = document.getElementsByClassName(
-    "swal2-confirm swal2-styled swal2-default-outline"
-  );
-  buttonError.innerHTML = `
-  <button
-  type="button"
-  onclick="errorLink()"
-  class="swal2-confirm swal2-styled swal2-default-outline"
-  aria-label=""
-  style="display: inline-block; background-color: rgb(13, 110, 253);"
-  
->
-  Recuperar
-</button>;
-  `;
-  function errorLink() {
-    window.location.replace("../index.html");
-    console.log("si ingresa a la funcion");
-  }
 };
