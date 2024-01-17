@@ -17,8 +17,11 @@ let swiper = new Swiper(".mySwiper",{
 
 document.addEventListener('keyup', e => {
     if (e.target.matches('#buscador')){
+
         document.querySelectorAll('.articulos').forEach(element=>{
-            element
+            element.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+                ?element.classList.remove("filtro")
+                :element.classList.add("filtro")
         })
     }
 })

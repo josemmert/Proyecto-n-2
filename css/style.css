@@ -37,8 +37,8 @@
 }
 
 .swiper-slide{
-    width: 280px;
-    height: 500px;
+    width: 290px;
+    height: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     background-color: #001550;
     padding: 40px;
@@ -122,4 +122,22 @@
       display: none;
     }
 }
+
+@media all and (min-width: 768px) {
+    .card-text:hover .tnone {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+  
+@media all and (max-width: 768px) {
+    .cardsm {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.filtro{
+    display: none;
+}
+  
 
