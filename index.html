@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Grupo 6">
-    <meta name="description" content="Segundo Proyecto">
-    <meta name="keyboard" content="js">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content=">Grupo6 80i" />
+    <meta name="description" content="Proyecto JavaScript" />
+    <meta
+      name="keywords"
+      content="html, css3, bootstrap, pages, javascript, etc"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="../css/customer.css">
-    <title>Techcode</title>
-</head>
+  
+    <title>TechCode Proyect</title>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar fixed-top z-0 navFoot-color navbar-expand-lg">
+    <nav class="navbar fixed-top z-0 navFoot-color navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">
                     <img src="img/log.jpg" alt="Techcode" width="70" height="70">
@@ -54,41 +61,237 @@
             </div>
         </nav>
     </header>
-    <main>
-
-
-        <div class="container w-100">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatibus iure minus et
-                voluptatem voluptas harum recusandae optio ex quibusdam assumenda dolorum facilis amet animi natus,
-                porro impedit culpa?
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam magni, minus dolore distinctio maiores
-                dolorem cupiditate quia sapiente autem fuga, aperiam ex inventore repellendus dolores beatae. Amet
-                dignissimos voluptas eaque!</p>
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatibus iure minus et
-                voluptatem voluptas harum recusandae optio ex quibusdam assumenda dolorum facilis amet animi natus,
-                porro impedit culpa?
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam magni, minus dolore distinctio maiores
-                dolorem cupiditate quia sapiente autem fuga, aperiam ex inventore repellendus dolores beatae. Amet
-                dignissimos voluptas eaque!</p>
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatibus iure minus et
-                voluptatem voluptas harum recusandae optio ex quibusdam assumenda dolorum facilis amet animi natus,
-                porro impedit culpa?
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam magni, minus dolore distinctio maiores
-                dolorem cupiditate quia sapiente autem fuga, aperiam ex inventore repellendus dolores beatae. Amet
-                dignissimos voluptas eaque!</p>
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis laboriosam voluptatibus iure minus et
-                voluptatem voluptas harum recusandae optio ex quibusdam assumenda dolorum facilis amet animi natus,
-                porro impedit culpa?
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam magni, minus dolore distinctio maiores
-                dolorem cupiditate quia sapiente autem fuga, aperiam ex inventore repellendus dolores beatae. Amet
-                dignissimos voluptas eaque!</p>
-            </p>
+    <main class="container-fluid">
+      <!-- Carrusel -->
+      <div
+        id="carouselExampleFade"
+        class="customcarrusel carousel slide carousel-fade carousel-dark"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="img/homeImg/zfold4.jpg"
+              class="imgcarrusel d-block w-100"
+              alt="zfold4"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/homeImg/s23ultra.jpg"
+              class="imgcarrusel d-block w-100"
+              alt="Samsung Galaxy S23 Ultra"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="img/homeImg/i15promax.jpg"
+              class="imgcarrusel d-block w-100"
+              alt="Iphone 15 Pro Max"
+            />
+          </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Fin del carrusel -->
+      <div class="payments justify-content-center">
+        <img src="img/homeImg/formasdepago.png" alt="Formas de Pago" />
+      </div>
+      <!-- Carrusel de Ofertas -->
+      <section class="mainSection">
+        <h2 class="titleoff">OFERTAS</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="icons">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="product-content">
+                <div class="product-txt">
+                  <span>$600000</span>
+                  <h3>Samsung S20 FE</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla.
+                  </p>
+                </div>
+                <div class="product-img">
+                  <img
+                    src="img/homeImg/s20FE.jpg"
+                    alt="Samsung Galaxy s20 FE"
+                  />
+                </div>
+              </div>
+              <a href="#" class="btn-1">Comprar</a>
+            </div>
+            <div class="swiper-slide">
+              <div class="icons">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="product-content">
+                <div class="product-txt">
+                  <span>$600000</span>
+                  <h3>Samsung S21</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla.
+                  </p>
+                </div>
+                <div class="product-img">
+                  <img src="img/homeImg/s21.png" alt="Samsung Galaxy s21" />
+                </div>
+              </div>
+              <a href="#" class="btn-1">Comprar</a>
+            </div>
+            <div class="swiper-slide">
+              <div class="icons">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="product-content">
+                <div class="product-txt">
+                  <span>$600000</span>
+                  <h3>Samsung S21+</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla.
+                  </p>
+                </div>
+                <div class="product-img">
+                  <img src="img/homeImg/s21+.png" alt="Samsung Galaxy s21+" />
+                </div>
+              </div>
+              <a href="#" class="btn-1">Comprar</a>
+            </div>
+            <div class="swiper-slide">
+              <div class="icons">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="product-content">
+                <div class="product-txt">
+                  <span>$600000</span>
+                  <h3>Moto G100</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla.
+                  </p>
+                </div>
+
+                <div class="product-img">
+                  <img src="img/homeImg/motog100.png" alt="Moto G100" />
+                </div>
+              </div>
+              <a href="#" class="btn-1">Comprar</a>
+            </div>
+            <div class="swiper-slide">
+              <div class="icons">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="product-content">
+                <div class="product-txt">
+                  <span>$600000</span>
+                  <h3>Redmi Note 11</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla.
+                  </p>
+                </div>
+                <div class="product-img">
+                  <img src="img/homeImg/redminote11.png" alt="Redmi Note 11" />
+                </div>
+              </div>
+              <a href="#" class="btn-1">Comprar</a>
+            </div>
+            <div class="swiper-slide">
+              <div class="icons">
+                <i class="fa-solid fa-circle-arrow-left"></i>
+                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="product-content">
+                <div class="product-txt">
+                  <span>$600000</span>
+                  <h3>Samsung A53</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nulla.
+                  </p>
+                </div>
+                <div class="product-img">
+                  <img
+                    src="img/homeImg/samsung a53.png"
+                    alt="Samsung Galaxy A53"
+                  />
+                </div>
+              </div>
+              <a href="#" class="btn-1">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fin del Carrusel de ofertas -->
+      <section>
+        <div class="container">
+          <div
+            class="d-flex align-items-center mx-5"
+            role="search"
+          >
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Search"
+              id="buscador"
+            />
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-3 my-3 articulos">
+              <a href="#">
+                <div class="card text-bg-dark card-text">
+                  <img
+                    src="img/homeImg/i15promax.jpg"
+                    class="card-img"
+                    alt="Raku"
+                  />
+                  <div class="card-img-overlay tnone cardsm">
+                    <h5 class="card-title display-5">Iphone 15 Pro Max</h5>
+                    <p class="text-dark">Ver mas detalles...</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="navFoot-color d-lg-flex justify-content-around">
+     <footer class="navFoot-color d-lg-flex justify-content-around">
         <div class="text-center border border-secondary border-1">
             <img class="img-footer" src="img/log.jpg">
             <p class="text-center">&copy Techcode 2023</p>
@@ -106,8 +309,10 @@
             <a href="https://www.instagram.com" target="_blank"><img class="img-footer p-2" src="img/instagram.png"></a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
     <script src="js/navdarFooter.js"></script>
-</body>
+  </body>
 
 </html>
