@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -21,6 +22,8 @@
     }
 }
 
+
+
 .titleoff{
     display: flex;
     justify-content: center;
@@ -30,6 +33,7 @@
     border: 1px solid #092361;
     color: #ffffff;
 }
+
 
 .swiper{
     width: 100%;
@@ -140,4 +144,18 @@
     display: none;
 }
   
+
+
+.btn-2 {
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    color: #ffffff;
+    background-color: #092361;
+    padding: 5px 30px;
+}
+
+.btn-2:hover{
+    background-color: #254e95;
+    color: #ffffff;
+}
 

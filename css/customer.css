@@ -1,0 +1,40 @@
+.navFoot-color{
+    background-color: #001550;
+   
+    }
+
+.img-footer{
+    width: 70px;
+    height: 70px;
+
+}
+
+@media(max-width:563px){
+    .img-footer{
+        width: 45px;
+        height: 45px;
+    }
+    
+}
+
+@media(max-width:280px){
+    .img-footer{
+        width: 35px;
+        height: 35px;
+    }
+    
+}
+
+.img-cart{
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-toggler-icon1 {
+    cursor: pointer !important;
+  }
+
+/* .classList{
+    background-color: azure;
+}
+ */
