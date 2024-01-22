@@ -8,6 +8,8 @@ import {
   ValidarTodo,
 } from "./hellpers.js";
 
+import { getRoleUserLog } from "./hellpersNF.js";
+
 let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
 let bodyTablaProductos = document.getElementById("tbodyProductos");
 let inputCodigo = document.getElementById("codigo");
@@ -249,3 +251,14 @@ window.EliminarProducto=function(codigo){
     });
     
   }
+
+
+//   //--------------NAVBAR-----------------//
+// function checkAdmin(){
+//   const role=getRoleUserLog()
+//   if(role!=='admin'){
+//     window.location.replace("../index.html");
+//   }
+//   }
+// checkout();
+// //-------------------------------------//
