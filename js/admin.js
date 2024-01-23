@@ -9,8 +9,12 @@ import {
   ValidarTodo,
 } from "./hellpers.js";
 
+
 let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
+let arrayUsuarios =JSON.parse(localStorage.getItem("Users")) || [];
+console.log(arrayUsuarios);
 let bodyTablaProductos = document.getElementById("tbodyProductos");
+let bodyTablaUsuarios = document.getElementById("tbodyUsuarios");
 let inputCodigo = document.getElementById("codigo");
 let inputMarca = document.getElementById("marca");
 let inputModelo = document.getElementById("modelo");
@@ -68,6 +72,7 @@ CreaPrimerosProductos();
 
 
 ListarProductos();
+ListarUsuarios();
 let esEdicion = false;
 
 let formProductos = document.querySelector("form");
@@ -204,7 +209,7 @@ function ListarProductos() {
         <td>${element.memoria}</td>
         <td>${element.almacenamiento}</td>
         <td>$${element.precio}</td>
-        <td><a href="${element.urlImg}" target ="_blank" title="Ver imagen">${element.urlImg}</a></td>
+        <td><a href="${element.urlImg}" target ="_blank" title="Ver imagen"><img src="${element.urlImg}" alt="Miniatura imagen producto" width=50px"></a></td>
         <td>${element.stock}</td>
         <td>
         <div class="d-flex">
@@ -214,6 +219,21 @@ function ListarProductos() {
         </td>
         
       </tr>`;
+  });
+}
+
+function ListarUsuarios(){
+  bodyTablaUsuarios.innerHTML = "";
+  arrayUsuarios.forEach((element) => {
+    bodyTablaUsuarios.innerHTML +=`<tr>
+    <th scope="row">${element.nombre}</th>
+    <td>${element.email}</td>
+    <td>${element.password}</td>
+    <td>${element.role}</td>
+    <td>
+        <button type="button" class="btn btn-danger mx-1" onclick="EliminarUsuario('${element.email}')">Eliminar</button>
+    </td>
+  </tr>`;
   });
 }
 
@@ -257,6 +277,32 @@ window.EliminarProducto=function(codigo){
       Swal.fire({
           title: "Exito!",
           text: "El producto se Elimino correctamente",
+          icon: "success",
+        });
+      }
+    });
+    
+  }
+
+  window.EliminarUsuario=function(email){
+    Swal.fire({
+      title: "¿Estas seguro?",
+      text: "Los cambios no se podran revertir",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Eliminar",
+      cancelButtonText:"Cancelar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const nuevoArrayUsuarios = arrayUsuarios.filter((element)=>element.email !== email);
+        arrayUsuarios = nuevoArrayUsuarios;
+        localStorage.setItem("Users", JSON.stringify(arrayUsuarios));
+        ListarUsuarios();
+      Swal.fire({
+          title: "Exito!",
+          text: "El usuario se Elimino correctamente",
           icon: "success",
         });
       }
