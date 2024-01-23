@@ -252,10 +252,3 @@ window.EliminarProducto=function(codigo){
     
   }
 
-//  function checkAdmin(){
-//   const role=getRoleUserLog()
-//   if(role!=='administrador'){
-//     window.location.replace("../index.html");
-//  }
-//   }
-// checkAdmin();

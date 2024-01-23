@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.login = function () {
-  SaveRolUser();
+  // SaveRolUser();
   checkAdmin();
 };
 
@@ -45,9 +45,11 @@ function checkAdmin() {
 }
 
 window.logOut = function () {
-  sessionStorage.removeItem("user");
+  sessionStorage.removeItem("userLog");
   document.querySelector("#li-ad").className = "nav-link d-none text-light";
   document.querySelector("#li-cl").className = "nav-link d-none";
   document.querySelector("#IsButton").classList.remove("d-none");
   document.querySelector("#IsRegister").classList.remove("d-none");
 };
+
+
