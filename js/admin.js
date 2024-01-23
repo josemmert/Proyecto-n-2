@@ -252,13 +252,10 @@ window.EliminarProducto=function(codigo){
     
   }
 
-
-//   //--------------NAVBAR-----------------//
-// function checkAdmin(){
+//  function checkAdmin(){
 //   const role=getRoleUserLog()
-//   if(role!=='admin'){
+//   if(role!=='administrador'){
 //     window.location.replace("../index.html");
+//  }
 //   }
-//   }
-// checkout();
-// //-------------------------------------//
+// checkAdmin();

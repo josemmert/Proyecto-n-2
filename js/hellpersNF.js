@@ -1,7 +1,7 @@
 
 export function getRoleUserLog(){
-    const user= JSON.parse(sessionStorage.getItem('user'))
-   if(user!==null && user.role==='admin'){
+    const user= JSON.parse(sessionStorage.getItem('userLog'))
+   if(user!==null && user.role==='administrador'){
     
     return 'admin'
 }else{
@@ -11,8 +11,8 @@ export function getRoleUserLog(){
 };
 
 export function SaveRolUser(user){
-    sessionStorage.setItem('user', JSON.stringify(user)) //guarda el user que pase en login
-        };
+    sessionStorage.setItem('user', JSON.stringify(user)) 
+}
 
 
     
