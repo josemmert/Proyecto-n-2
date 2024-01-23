@@ -1,5 +1,6 @@
 import {
   CodigoAleatorio,
+  CreaPrimerosProductos,
   ValidarInputDescripcion,
   ValidarInputPrecio,
   ValidarInputStock,
@@ -16,6 +17,7 @@ let inputModelo = document.getElementById("modelo");
 let inputPantalla = document.getElementById("pantalla");
 let inputMemoria = document.getElementById("memoria");
 let inputAlmacenamiento = document.getElementById("almacenamiento");
+let inputCamara = document.getElementById("camara")
 let inputDescripcion = document.getElementById("descripcion");
 let inputPrecio = document.getElementById("precio");
 let inputUrlImg = document.getElementById("imagen");
@@ -41,6 +43,10 @@ inputAlmacenamiento.addEventListener("blur", () => {
   ValidarInputVarios(inputAlmacenamiento);
 });
 
+inputCamara.addEventListener("blur", () => {
+  ValidarInputVarios(inputCamara);
+})
+
 inputDescripcion.addEventListener("blur", () => {
   ValidarInputDescripcion(inputDescripcion);
 });
@@ -57,6 +63,9 @@ inputStock.addEventListener("blur", () => {
   ValidarInputStock(inputStock);
 });
 //FIN VALIDACIONES
+
+CreaPrimerosProductos();
+
 
 ListarProductos();
 let esEdicion = false;
@@ -75,7 +84,8 @@ function GuardarProducto(e) {
       inputDescripcion,
       inputPrecio,
       inputUrlImg,
-      inputStock
+      inputStock,
+      inputCamara
     )
   ) {
     if(esEdicion){
@@ -100,6 +110,7 @@ function CrearProducto() {
     pantalla: inputPantalla.value,
     memoria: inputMemoria.value,
     almacenamiento: inputAlmacenamiento.value,
+    camara: inputCamara.value,
     descripcion: inputDescripcion.value,
     precio: inputPrecio.value,
     urlImg: inputUrlImg.value,
@@ -140,6 +151,7 @@ function GuardarProductoParaEdicion(){
             arrayProductos[indiceProducto].pantalla=inputPantalla.value;
             arrayProductos[indiceProducto].memoria=inputMemoria.value; 
             arrayProductos[indiceProducto].almacenamiento=inputAlmacenamiento.value;
+            arrayProductos[indiceProducto].camara=inputCamara.value;
             arrayProductos[indiceProducto].descripcion=inputDescripcion.value;
             arrayProductos[indiceProducto].precio=inputPrecio.value;
             arrayProductos[indiceProducto].urlImg=inputUrlImg.value;
@@ -169,6 +181,7 @@ window.LimpiarFormulario = function () {
   inputPantalla.className = "form-control";
   inputMemoria.className = "form-control";
   inputAlmacenamiento.className = "form-control";
+  inputCamara.className="form-control";
   inputDescripcion.className = "form-control";
   inputPrecio.className = "form-control";
   inputUrlImg.className = "form-control";
@@ -216,6 +229,7 @@ window.CargarEdicion = function (codigo){
         inputPantalla.value = productoAEditar.pantalla;
         inputMemoria.value = productoAEditar.memoria;
         inputAlmacenamiento.value = productoAEditar.almacenamiento;
+        inputCamara.value = productoAEditar.camara;
         inputDescripcion.value = productoAEditar.descripcion;
         inputPrecio.value = productoAEditar.precio;
         inputUrlImg.value = productoAEditar.urlImg;
