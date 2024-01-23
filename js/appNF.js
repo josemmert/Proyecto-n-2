@@ -1,4 +1,4 @@
-import { SaveRolUser, getRoleUserLog } from "./hellpersNF.js";
+import {getRoleUserLog } from "./hellpersNF.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("La página se ha cargado");
@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cerrarSesionBtn = document.getElementById("CsButton");
 
   iniciarSesionBtn.addEventListener("click", () => {
-    console.log('Hiciste clic en "Iniciar Sesión"');
     sessionStorage.setItem("ultimoBoton", "iniciarSesion");
   });
 
@@ -18,16 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const ultimoBoton = sessionStorage.getItem("ultimoBoton");
 
   if (ultimoBoton === "iniciarSesion") {
-    console.log("Último botón: Iniciar Sesión");
     checkAdmin();
   } else if (ultimoBoton === "cerrarSesion") {
-    console.log("Último botón: Cerrar Sesión");
     logOut();
   }
 });
 
 window.login = function () {
-  // SaveRolUser();
   checkAdmin();
 };
 

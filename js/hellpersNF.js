@@ -9,10 +9,3 @@ export function getRoleUserLog(){
     return 'invitado'
 }
 };
-
-export function SaveRolUser(user){
-    sessionStorage.setItem('user', JSON.stringify(user)) 
-}
-
-
-    
