@@ -14,8 +14,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/customer.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/customer.css">
   
     <title>TechCode Proyect</title>
   </head>
@@ -46,31 +46,26 @@
                         </ul>
                     </div>
                     <ul class="navbar-nav d-flex justify-content-center">
-                        <li class="nav-item" >
-                            <a class="nav-link text-light d-none" id="li-ad" href="./pages/admin.html" >Administración </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <img src="img/cart.png" class="img-cart"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-none" id="li-cl" href="#"> <img src="img/cart.png" class="img-cart"></a>
+                            <a class="nav-link text-light" href="#">Login</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link text-light" id='IsRegister'  href="./pages/login-register.html?action=register">Registrarse</a>
-                      </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" id='IsButton' href="./pages/login-register.html?action=login">Iniciar sesión</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" id='CsButton' onclick="logOut()" >Cerrar sesión</a>
+                            <a class="nav-link text-light" href="#" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Sign in</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container-fluid z-0 my-5">
+    <main class="container-fluid pt-5">
       <!-- Carrusel -->
       <div
         id="carouselExampleFade"
-        class="customcarrusel carousel slide carousel-fade carousel-dark border border-2 border-warning"
+        class="customcarrusel carousel slide carousel-fade carousel-dark"
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
@@ -125,11 +120,6 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="icons">
-                <i class="fa-solid fa-circle-arrow-left"></i>
-                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
-                <i class="fa-regular fa-heart"></i>
-              </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$600000</span>
@@ -146,14 +136,9 @@
                   />
                 </div>
               </div>
-              <a href="#" class="btn-1">Comprar</a>
+              <a href="#" class="btn-1">Ver mas detalles...</a>
             </div>
             <div class="swiper-slide">
-              <div class="icons">
-                <i class="fa-solid fa-circle-arrow-left"></i>
-                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
-                <i class="fa-regular fa-heart"></i>
-              </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$600000</span>
@@ -167,14 +152,9 @@
                   <img src="img/homeImg/s21.png" alt="Samsung Galaxy s21" />
                 </div>
               </div>
-              <a href="#" class="btn-1">Comprar</a>
+              <a href="#" class="btn-1">Ver mas detalles...</a>
             </div>
             <div class="swiper-slide">
-              <div class="icons">
-                <i class="fa-solid fa-circle-arrow-left"></i>
-                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
-                <i class="fa-regular fa-heart"></i>
-              </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$600000</span>
@@ -188,14 +168,9 @@
                   <img src="img/homeImg/s21+.png" alt="Samsung Galaxy s21+" />
                 </div>
               </div>
-              <a href="#" class="btn-1">Comprar</a>
+              <a href="#" class="btn-1">Ver mas detalles...</a>
             </div>
             <div class="swiper-slide">
-              <div class="icons">
-                <i class="fa-solid fa-circle-arrow-left"></i>
-                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
-                <i class="fa-regular fa-heart"></i>
-              </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$600000</span>
@@ -210,14 +185,9 @@
                   <img src="img/homeImg/motog100.png" alt="Moto G100" />
                 </div>
               </div>
-              <a href="#" class="btn-1">Comprar</a>
+              <a href="#" class="btn-1">Ver mas detalles...</a>
             </div>
             <div class="swiper-slide">
-              <div class="icons">
-                <i class="fa-solid fa-circle-arrow-left"></i>
-                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
-                <i class="fa-regular fa-heart"></i>
-              </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$600000</span>
@@ -231,14 +201,9 @@
                   <img src="img/homeImg/redminote11.png" alt="Redmi Note 11" />
                 </div>
               </div>
-              <a href="#" class="btn-1">Comprar</a>
+              <a href="#" class="btn-1">Ver mas detalles...</a>
             </div>
             <div class="swiper-slide">
-              <div class="icons">
-                <i class="fa-solid fa-circle-arrow-left"></i>
-                <!-- <img src="img/homeImg/s20FE.jpg" alt="samsung s20FE"> -->
-                <i class="fa-regular fa-heart"></i>
-              </div>
               <div class="product-content">
                 <div class="product-txt">
                   <span>$600000</span>
@@ -255,7 +220,7 @@
                   />
                 </div>
               </div>
-              <a href="#" class="btn-1">Comprar</a>
+              <a href="#" class="btn-1">Ver mas detalles...</a>
             </div>
           </div>
         </div>
@@ -275,26 +240,8 @@
               id="buscador"
             />
           </div>
-          <!-- <div class="row" id="row-home">
+          <div class="row" id="row-home">
 
-          </div> -->
-          <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-3 my-3 articulos">
-              <a href="#">
-                <div class="card text-bg-dark card-text">
-                  <img
-                    src="img/homeImg/i15promax.jpg"
-                    class="card-img"
-                    alt="Raku"
-                  />
-                  <div class="card-img-overlay tnone cardsm">
-                    <h5 class="card-title display-5">Iphone 15 Pro Max</h5>
-                    <p class="text-dark">Ver mas detalles...</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                  </div>
-                </div>
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -319,10 +266,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/home.js"></script> 
+    <script src="js/home.js"></script>
     <script src="js/navdarFooter.js"></script>
-    <script type="module" src="./js/appNF.js"></script>
-
   </body>
 
 </html>
