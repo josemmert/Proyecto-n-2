@@ -28,7 +28,7 @@ if (action === "register") {
   let emailRegister = document.getElementById("emailRegister");
   let passwordRegister = document.getElementById("passwordRegister");
   let passwordRegister2 = document.getElementById("passwordRegister2");
-
+  let acepted = document.getElementById("acepted");
   let formRegister = document.getElementById("formRegister");
 
   formRegister.addEventListener("submit", (event) => {
@@ -55,6 +55,7 @@ if (action === "register") {
           email: emailRegister.value,
           password: passwordRegister.value,
           role: "cliente",
+          aceptedProm: acepted.checked,
         };
         listUsers.push(user);
         Swal.fire({
