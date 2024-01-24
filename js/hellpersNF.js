@@ -4,8 +4,11 @@ export function getRoleUserLog(){
    if(user!==null && user.role==='administrador'){
     
     return 'admin'
-}else{
-    
+}else if(user!==null && user.role!=='administrador'){
+
     return 'invitado'
+}else {
+    
+    return null
 }
 };

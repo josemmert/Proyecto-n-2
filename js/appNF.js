@@ -1,28 +1,28 @@
 import {getRoleUserLog } from "./hellpersNF.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("La página se ha cargado");
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("La página se ha cargado");
 
-  const iniciarSesionBtn = document.getElementById("IsButton");
-  const cerrarSesionBtn = document.getElementById("CsButton");
+    const iniciarSesionBtn = document.getElementById("IsButton");
+    const cerrarSesionBtn = document.getElementById("CsButton");
 
-  iniciarSesionBtn.addEventListener("click", () => {
-    sessionStorage.setItem("ultimoBoton", "iniciarSesion");
+    iniciarSesionBtn.addEventListener("click", () => {
+      sessionStorage.setItem("ultimoBoton", "iniciarSesion");
+    });
+
+    cerrarSesionBtn.addEventListener("click", () => {
+      sessionStorage.setItem("ultimoBoton", "cerrarSesion");
+    });
+    const ultimoBoton = sessionStorage.getItem("ultimoBoton");
+
+    if (ultimoBoton === "iniciarSesion") {
+      checkAdmin();
+    } else if (ultimoBoton === "cerrarSesion") {
+      logOut();
+    }
   });
 
-  cerrarSesionBtn.addEventListener("click", () => {
-    sessionStorage.setItem("ultimoBoton", "cerrarSesion");
-  });
-
-  const ultimoBoton = sessionStorage.getItem("ultimoBoton");
-
-  if (ultimoBoton === "iniciarSesion") {
-    checkAdmin();
-  } else if (ultimoBoton === "cerrarSesion") {
-    logOut();
-  }
-});
-
+  
 window.login = function () {
   checkAdmin();
 };
