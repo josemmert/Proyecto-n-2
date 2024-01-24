@@ -65,6 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p class="h6">${product.almacenamiento}</p>
                         </div>
                     </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-camera fa-3x me-3"></i>
+                        <div>
+                            <p class="mb-0 h6">Camara:</p>
+                            <p class="h6">${product.camara}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>`;
