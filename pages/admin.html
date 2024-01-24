@@ -22,6 +22,9 @@
             <h3>CARGAR NUEVO PRODUCTO</h3>
         </div>
         <section class="container">
+
+        <div class="row">
+            <div class="col">
             <form>
                 <div class="my-3">
                     <label for="codigo" class="form-label">Codigo</label>
@@ -53,6 +56,10 @@
                     <input id="almacenamiento" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese la capacidad de almacenamiento del dispositivo" required>
                 </div>
                 <div class="my-3">
+                    <label for="camara" class="form-label">Camara</label>
+                    <input id="camara" type="text" class="form-control" minlength="1" maxlength="30" placeholder="Ingrese la capacidad de la camara" required>
+                </div>
+                <div class="my-3">
                     <label for="descripcion" class="form-label">Descripcion</label>
                     <textarea id="descripcion" type="text" class="form-control" placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="200" required rows="3"></textarea>
                 </div>
@@ -70,7 +77,15 @@
                 </div>
                 <button class="btn btn-2 my-3" type="submit">Guardar</button>
             </form>
-            <button type="button" class="btn btn-2" onclick="LimpiarFormulario()">Nuevo</button>
+
+        </div>
+        
+        
+        <div class="col d-flex align-items-center justify-content-center d-none d-lg-flex">
+            <img src="../img/Logo-TechCode-oscuro.png" class="img-fluid" alt="Logo TechCode"  >
+        </div>
+    </div>
+    <button type="button" class="btn btn-2" onclick="LimpiarFormulario()">Nuevo</button>
         </section>
         <hr>
         <section class="container-fluid my-3">
@@ -88,7 +103,7 @@
                             <th scope="col">Memoria</th>
                             <th scope="col">Almacenamiento</th>
                             <th scope="col">Precio</th>
-                            <th scope="col">Url Imagen</th>
+                            <th scope="col">Imagen</th>
                             <th scope="col">Stock</th>
                             <th scope="col">Acciones</th>
                           </tr>
@@ -126,15 +141,19 @@
                             <th scope="col">Email</th>
                             <th scope="col">Password</th>
                             <th scope="col">Rol</th>
+                            <th scope="col">Acciones</th>
                           </tr>
                         </thead>
-                        <tbody>
-                          <tr>
+                        <tbody id="tbodyUsuarios">
+                          <!-- <tr>
                             <th scope="row">anonimo</th>
                             <td>anonimo@gmail.com</td>
                             <td>123456789</td>
                             <td>Invitado</td>
-                          </tr>
+                            <td>
+                                <button type="button" class="btn btn-danger mx-1">Eliminar</button>
+                            </td>
+                          </tr> -->
                         </tbody>
                       </table>
                 </div>
@@ -151,5 +170,6 @@
     
     <script src="../js/bootstrap.min.js"></script>
     <script type="module" src="../js/admin.js"></script>
+    
 </body>
 </html>

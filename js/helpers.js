@@ -41,7 +41,7 @@ export function validatePassword(input) {
 }
 
 export function checkPassword(passwor1, passwor2) {
-  if (passwor1.value === passwor2.value) {
+  if (passwor1.value === passwor2.value && passwor2.value !== "") {
     passwor2.className = `mb-3 form-control is-valid`;
     return true;
   } else {
@@ -70,8 +70,9 @@ export function LoadUserAdmin() {
     const userAdmin = {
       nombre: "Administrador",
       email: "admin@admin.com",
-      password: "admin123",
+      password: "Admin123*",
       role: "administrador",
+      aceptedProm: false,
     };
     listUsers.push(userAdmin);
     localStorage.setItem("Users", JSON.stringify(listUsers));

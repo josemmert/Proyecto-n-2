@@ -34,6 +34,7 @@
     cursor: pointer !important;
   }
 
+
 .box-titles{
     background-color: #001550;
     color: aliceblue;
@@ -53,13 +54,11 @@
 
 }
 
-.info-tooltip{
-    background-color: #254e95;
-    border-radius: 25px;
-    margin: 10px;
-}
 
-tooltip.style.position = 'absolute';}
-tooltip.style.top = '100%'}; // Coloca el tooltip debajo de la caja
-tooltip.style.left = '50%';
-tooltip.style.transform = 'translateX(-50%)';
+
+
+ .containers{
+    background-color: #001550;
+   
+    }
+

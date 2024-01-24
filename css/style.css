@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+main{
+    margin-top: 45px;
+}
+
 @media (max-width: 345px) {
     .imgcarrusel {
       height: 300px;
