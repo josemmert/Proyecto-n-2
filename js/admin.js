@@ -10,6 +10,7 @@ import {
 } from "./hellpers.js";
 
 
+
 let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
 let arrayUsuarios =JSON.parse(localStorage.getItem("Users")) || [];
 console.log(arrayUsuarios);
@@ -284,6 +285,7 @@ window.EliminarProducto=function(codigo){
     
   }
 
+
   window.EliminarUsuario=function(email){
     Swal.fire({
       title: "¿Estas seguro?",
@@ -309,3 +311,4 @@ window.EliminarProducto=function(codigo){
     });
     
   }
+

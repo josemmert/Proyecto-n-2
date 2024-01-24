@@ -1,3 +1,4 @@
+
 import {
   LoadUserAdmin,
   ValidateForm,
@@ -6,6 +7,7 @@ import {
   validateName,
   validatePassword,
 } from "./helpers.js";
+
 
 LoadUserAdmin();
 let listUsers = JSON.parse(localStorage.getItem("Users"));
@@ -151,3 +153,4 @@ window.passwordRecover = function () {
     }
   });
 };
+

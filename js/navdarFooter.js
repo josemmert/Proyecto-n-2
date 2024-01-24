@@ -1,3 +1,4 @@
+
 const pageSelected = document.querySelectorAll('.nav-item'); //capturar todas las etiquetas con clase navitem
 console.log(pageSelected);
 pageSelected.forEach(element => {

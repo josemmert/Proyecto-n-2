@@ -22,7 +22,7 @@
 
   <body>
     <header>
-    <nav class="navbar fixed-top z-0 navFoot-color navbar-expand-lg">
+    <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/index.html">
                     <img src="img/log.jpg" alt="Techcode" width="70" height="70">
@@ -46,22 +46,27 @@
                         </ul>
                     </div>
                     <ul class="navbar-nav d-flex justify-content-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> <img src="img/cart.png" class="img-cart"></a>
+                        <li class="nav-item" >
+                            <a class="nav-link text-light d-none" id="li-ad" href="./pages/admin.html" >Administración </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Login</a>
+                            <a class="nav-link d-none" id="li-cl" href="#"> <img src="img/cart.png" class="img-cart"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Sign in</a>
+                          <a class="nav-link text-light" id='IsRegister'  href="./pages/login-register.html?action=register">Registrarse</a>
+                      </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" id='IsButton' href="./pages/login-register.html?action=login">Iniciar sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" id='CsButton' onclick="logOut()" >Cerrar sesión</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container-fluid">
+    <main class="container-fluid z-0 my-5">
       <!-- Carrusel -->
       <div
         id="carouselExampleFade"
@@ -314,8 +319,10 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/home.js"></script>
+    <script src="js/home.js"></script> 
     <script src="js/navdarFooter.js"></script>
+    <script type="module" src="./js/appNF.js"></script>
+
   </body>
 
 </html>
