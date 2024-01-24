@@ -34,7 +34,31 @@
     cursor: pointer !important;
   }
 
+
+.box-titles{
+    background-color: #001550;
+    color: aliceblue;
+    margin: 20px;
+    padding: 20px;
+    size: 20px;
+    text-align: center;
+
+}
+
+
+.box-form{
+    background-color: #254e95;
+    margin: 20px;
+    padding: 20px;
+   border-radius: 30px;
+
+}
+
+
+
+
  .containers{
     background-color: #001550;
    
     }
+
