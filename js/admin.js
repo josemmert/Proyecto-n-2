@@ -312,3 +312,25 @@ window.EliminarProducto=function(codigo){
     
   }
 
+  window.getRole = function(){
+    const user= JSON.parse(sessionStorage.getItem('userLog'));
+    if(user === null){
+      return "invitado"
+    }else if (user.role === "administrador") {
+      return "admin"
+    }else{
+      return "invitado"
+    }
+  }
+
+  window.CheckAdmin = function(){
+    const role = getRole();
+    console.log(role);
+    if(role!=="admin"){
+      window.location.replace("../index.html");
+    }
+  }
+
+  CheckAdmin();
+
+

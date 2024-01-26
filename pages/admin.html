@@ -7,12 +7,93 @@
     <meta name="description" content="Proyecto JavaScript" />
     <meta name="keywords" content="html, css3, bootstrap, pages, javascript, etc" />
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/customer.css">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Administracion</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+              <img src="../img/log.jpg" alt="Techcode" width="70" height="70" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon text-bg-light"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
+              id="navbarNav"
+            >
+              <div
+                class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Contactos</a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="navbar-nav d-flex justify-content-center">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-light d-none"
+                    id="li-ad"
+                    href="./admin.html"
+                    >Administración
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-none" id="li-cl" href="#">
+                    <img src="img/cart.png" class="img-cart"
+                  /></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="d-none nav-link text-light"
+                    id="IsRegister"
+                    href="./login-register.html"
+                    >Registrarse</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-light"
+                    id="IsButton"
+                    href="./pages/login-register.html?action=login"
+                    >Iniciar sesión</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <button
+                    class="nav-link text-light"
+                    id="CsButton"
+                    onclick="logOut(), CheckAdmin()"
+                  >
+                    Cerrar sesión
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
     <main class="container-fluid">
         <section class="my-5 text-center titleoff">
             <h2 id="titulo">ADMINISTRACION DE PRODUCTOS</h2>
@@ -61,7 +142,7 @@
                 </div>
                 <div class="my-3">
                     <label for="descripcion" class="form-label">Descripcion</label>
-                    <textarea id="descripcion" type="text" class="form-control" placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="200" required rows="3"></textarea>
+                    <textarea id="descripcion" type="text" class="form-control" placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="2000" required rows="3"></textarea>
                 </div>
                 <div class="my-3">
                     <label for="precio" class="form-label">Precio</label>
@@ -160,16 +241,39 @@
             </article>
         </section>
     </main>
-    <footer>
-        <hr>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos quibusdam cupiditate delectus numquam distinctio. Dicta veniam minus dolorem qui expedita eligendi perspiciatis ducimus, optio pariatur ad quos delectus. Hic, corporis.
-        Error dolores provident hic quos molestiae fugiat sed distinctio, officiis ea eaque et veniam. Quae mollitia beatae nulla explicabo delectus aliquid? Repudiandae ex est perferendis autem mollitia ullam, debitis amet?
-        Rerum voluptatibus provident, molestiae alias ducimus, inventore dignissimos fugiat vitae libero optio quia dolores dolorum iusto amet quidem autem exercitationem beatae nihil corrupti cumque voluptates, minus sit! Cum, aspernatur debitis.
-        </p>
-    </footer>
+    <footer class="navFoot-color d-lg-flex justify-content-around">
+        <div class="text-center border border-secondary border-1">
+          <img class="img-footer" src="../img/log.jpg" />
+          <p class="text-center">&copy Techcode 2023</p>
+        </div>
+  
+        <li class="text-center nav-item">
+          <a class="nav-link text-white text-md-center" href="../pages/error.html"
+            >Acerca de Nosotros</a
+          >
+        </li>
+        <li class="text-center nav-item">
+          <a class="nav-link text-white" href="../pages/error.html">Contactos</a>
+        </li>
+  
+        <div class="text-center my-3 p-2">
+          <a href="https://www.facebook.com" target="_blank"
+            ><img class="img-footer p-2" src="../img/facebook.png"
+          /></a>
+          <a href="https://www.whatsapp.com" target="_blank"
+            ><img class="img-footer p-2" src="../img/whatsapp.png"
+          /></a>
+          <a href="https://www.instagram.com" target="_blank"
+            ><img class="img-footer p-2" src="../img/instagram.png"
+          /></a>
+        </div>
+      </footer>
     
     <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="../js/admin.js"></script>
+    <script type="module" src="../js/navdarFooter.js"></script>
+    <script type="module" src="../js/appNF.js"></script>
     
 </body>
 </html>

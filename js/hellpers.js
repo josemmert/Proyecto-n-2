@@ -29,7 +29,7 @@ export function ValidarInputDescripcion(input){
 }
 
 export function ValidarInputPrecio(input){
-    const regExPrecio=/^\$?\d+(\.\d{1,2})?$/;
+    const regExPrecio=/^\d{1,3}(\.\d{3})*,\d{2}$/;
     if(regExPrecio.test(input.value)){
         input.className="form-control is-valid"
         return true;
