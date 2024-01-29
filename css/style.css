@@ -163,37 +163,14 @@ main{
     color: #ffffff;
 }
 
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
 #cart {
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
-}
-
-.cart-item {
-  border-bottom: 1px solid #dee2e6;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.product-name {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.product-quantity, .product-price {
-  font-size: 1rem;
-  color: #6c757d;
-}
-
-.btn-remove {
-  background-color: #dc3545;
-  color: white;
-}
-
-/* Estilos para el botón de pagar */
-.btn-pay {
-  background-color: #28a745;
-  color: white;
 }
