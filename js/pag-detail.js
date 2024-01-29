@@ -2,16 +2,16 @@ let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
 let detailbody = document.getElementById("main-detail");
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Obtener el código del producto de la URL
-    const params = new URLSearchParams(window.location.search);
-    const productCodigo = params.get("codigo");
+  // Obtener el código del producto de la URL
+  const params = new URLSearchParams(window.location.search);
+  const productCodigo = params.get("codigo");
 
-    // Obtener el producto específico según el código
-    let product = arrayProductos.find((p) => p.codigo === productCodigo);
+  // Obtener el producto específico según el código
+  let product = arrayProductos.find((p) => p.codigo === productCodigo);
 
-    // Mostrar los detalles del producto
-    if (product) {
-        detailbody.innerHTML = `
+  // Mostrar los detalles del producto
+  if (product) {
+    detailbody.innerHTML = `
             <div class="container mt-5 pt-5">
                 <h3 class="my-4">${product.marca}</h3>
             </div>
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p><span class="fw-bold">Stock: </span>${product.stock}</p>
                         </div>
                         <div class="d-flex justify-content-center mb-3 mb-lg-0">
-                            <button class="btn btn-primary">Agregar al carrito</button>
+                            <button class="btn btn-primary btn-add-to-cart">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -76,14 +76,87 @@ document.addEventListener("DOMContentLoaded", function () {
                             <i class="fas fa-camera fa-2x"></i>
                         </div>
                         <div>
-                            <p class="mb-0">Camara:</p>
+                            <p class="mb-0">Cámara:</p>
                             <p class="">${product.camara}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>`;
-    } else {
-        console.error("Producto no encontrado");
-    }
+  } else {
+    console.error("Producto no encontrado");
+  }
+
+  // Obtener el botón "Agregar al carrito"
+  const addToCartButton = document.querySelector(".btn-add-to-cart");
+
+  // Añadir un evento de clic al botón
+  addToCartButton.addEventListener("click", function () {
+    // Llamar a la función addToCart con la información del producto
+    addToCart(product);
+  });
 });
+
+// Función para agregar productos al carrito
+function addToCart(product) {
+  // Agrega la lógica para agregar el producto al carrito aquí
+  // Puedes usar localStorage o cualquier otra estructura de datos para almacenar los productos en el carrito
+  // Por ahora, mostraremos un mensaje de alerta
+  alert(
+    `Producto "${product.modelo}" agregado al carrito. ¡Listo para comprar!`
+  );
+}
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener el parámetro de identificación del producto desde la URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get("id");
+
+  // Obtener el producto correspondiente según el ID
+  const producto = obtenerProductoPorId(productId);
+
+  // Mostrar detalles del producto en la página
+  mostrarDetallesDelProducto(producto);
+
+  // Obtener el botón "Agregar al Carrito"
+  const btnAgregarAlCarrito = document.getElementById("btnAgregarAlCarrito");
+
+  // Añadir un evento de clic al botón "Agregar al Carrito"
+  btnAgregarAlCarrito.addEventListener("click", function () {
+    // Lógica para agregar el producto al carrito (puedes usar una función existente en cart.js)
+    agregarAlCarrito(producto);
+  });
+});
+
+// Función para obtener el producto por ID (puedes implementar esta función según tu estructura de datos)
+function obtenerProductoPorId(productId) {
+  // Lógica para obtener el producto por ID (por ejemplo, buscar en tu array de productos)
+  // Retorna el objeto del producto correspondiente
+  // ...
+
+  // Ejemplo:
+  return {
+    id: 1,
+    nombre: "Producto 1",
+    descripcion: "Descripción del Producto 1",
+    precio: 100.0,
+    // Otros detalles del producto
+  };
+}
+
+// Función para mostrar detalles del producto en la página
+function mostrarDetallesDelProducto(producto) {
+  // Lógica para mostrar los detalles del producto en la página (nombre, descripción, precio, etc.)
+  const detallesProducto = document.getElementById("detallesProducto");
+  detallesProducto.innerHTML = `
+        <h2>${producto.nombre}</h2>
+        <p>${producto.descripcion}</p>
+        <p>Precio: $${producto.precio.toFixed(2)}</p>
+        <!-- Otros detalles del producto -->
+      `;
+}
+
+// Función para agregar un producto al carrito (puedes implementar esta función en cart.js)
+function agregarAlCarrito(producto) {
+  // Lógica para agregar el producto al carrito
+  // ...
+}
