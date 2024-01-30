@@ -8,11 +8,10 @@ pageSelected.forEach(element => {
 });
 
 function highlight() {
-    
-  this.querySelector('a').style.background= '#254e95'; 
+  this.querySelector('a').style.background= '#1D215E'; 
   this.querySelector('a').style.borderRadius= '50px';
-
 }
+
 function removeHighlight() {
   this.querySelector('a').style.background = '';
 }
