@@ -1,12 +1,18 @@
 .navFoot-color{
-    background-color: #001550;
-   
+    background-color: #c1d1fc;
     }
 
 .img-footer{
     width: 70px;
     height: 70px;
+}
 
+.custom-text{
+    color: #1D215E;
+}
+
+.custom-text:hover{
+    color: #fff;
 }
 
 @media(max-width:563px){
@@ -32,12 +38,12 @@
 
 .navbar-toggler-icon1 {
     cursor: pointer !important;
-  }
+}
 
 
 .box-titles{
     background-color: #001550;
-    color: aliceblue;
+    color: #1D215E;
     margin: 20px;
     padding: 20px;
     size: 20px;
@@ -45,20 +51,19 @@
 
 }
 
-
 .box-form{
     background-color: #254e95;
     margin: 20px;
     padding: 20px;
-   border-radius: 30px;
-
+    border-radius: 30px;
 }
 
-
-
-
- .containers{
+.containers{
     background-color: #001550;
-   
-    }
+}
+
+footer li{
+    text-decoration: none;
+    list-style: none;
+}
 

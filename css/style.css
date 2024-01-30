@@ -1,12 +1,20 @@
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+:root{
+    --color-azul: #1D215E;
+    --color-celeste: #c1d1fc;
+    --color-naranja: #FD972B;
+    --color-cremita: #fff8ed;
+}
+
+
 main{
     margin-top: 45px;
+    background: var(--color-cremita);
 }
 
 @media (max-width: 345px) {
@@ -52,22 +60,6 @@ main{
     padding: 40px;
     text-align: center;
     border-radius: 15px;
-}
-
-.icons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.icons i{
-    font-size: 20px;
-    color: #FF8900;
-}
-
-.icons img{
-    width: 120px;
 }
 
 .product-content{
