@@ -54,22 +54,6 @@ main{
     border-radius: 15px;
 }
 
-.icons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.icons i{
-    font-size: 20px;
-    color: #FF8900;
-}
-
-.icons img{
-    width: 120px;
-}
-
 .product-content{
     display: flex;
     justify-content: space-between;

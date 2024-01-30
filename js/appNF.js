@@ -45,5 +45,5 @@ window.logOut = function () {
   document.querySelector("#li-cl").className = "nav-link d-none";
   document.querySelector("#IsButton").classList.remove("d-none");
   document.querySelector("#IsRegister").classList.remove("d-none");
-  window.location.replace("index.html");
+  window.location.replace("../index.html");
 };

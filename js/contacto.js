@@ -9,8 +9,9 @@ formulario.addEventListener('submit',(e)=>{
 function validarNombre() {
     let nombre = document.getElementById('nombre').value;
     let errorNombre = document.getElementById('errorNombre');
+    const regexName = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s']+$/;
 
-    if (nombre.trim() === '') {
+    if (nombre.trim() !== '' && !regexName.test(nombre)) {
         errorNombre.innerHTML = 'Por favor, ingrese su nombre.';
         return false;
     } else {
