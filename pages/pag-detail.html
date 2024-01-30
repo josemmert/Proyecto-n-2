@@ -20,86 +20,57 @@
 
   <body>
     <header>
-      <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">
-            <img src="../img/log.jpg" alt="Techcode" width="70" height="70" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon text-bg-light"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
-            id="navbarNav"
-          >
-            <div
-              class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
-              id="navbarNav"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="../index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="#">Contactos</a>
-                </li>
-              </ul>
-            </div>
-            <ul class="navbar-nav d-flex justify-content-center">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light d-none"
-                  id="li-ad"
-                  href="./admin.html"
-                  >Administración
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-none" id="li-cl" href="#">
-                  <img src="../img/cart.png" class="img-cart"
-                /></a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light"
-                  id="IsRegister"
-                  href="./login-register.html?action=register"
-                  >Registrarse</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light"
-                  id="IsButton"
-                  href="./login-register.html?action=login"
-                  >Iniciar sesión</a
-                >
-              </li>
-              <li class="nav-item">
-                <button
-                  class="nav-link text-light d-none"
-                  id="CsButton"
-                  onclick="logOut()"
-                >
-                  Cerrar sesión
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+        <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/index.html">
+                        <img src="../img/log.jpg" alt="Techcode" width="70" height="70">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon text-bg-light"></span>
+                    </button>
+                    <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarNav">
+                        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-light" href=#>Contactos</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="navbar-nav d-flex justify-content-center">
+                            <li class="nav-item" >
+                                <a class="nav-link text-light d-none" id="li-ad" href="./admin.html" >Administración </a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                  class="nav-link text-light d-none"
+                                  id="li-cl"
+                                  href="cart.html"
+                                  data-toggle="modal"
+                                  data-target="#cartModal"
+                                  >Carrito</a
+                                >
+                              </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-light" id='IsRegister'  href="./login-register.html?action=register">Registrarse</a>
+                          </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" id='IsButton' href="./login-register.html?action=login">Iniciar sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" id='CsButton' onclick="logOut()" >Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
     <main id="main-detail"></main>
 

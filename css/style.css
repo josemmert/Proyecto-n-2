@@ -159,21 +159,10 @@ main{
     max-width: 400px;
     margin: 0 auto;
 }
-
-.contact-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-.contact-data {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-/* Estilos para resaltar errores de validación */
-.error {
-    color: red;
-    font-size: 80%;
+#cart {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
