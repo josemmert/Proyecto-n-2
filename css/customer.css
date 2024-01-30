@@ -1,64 +1,58 @@
-.navFoot-color{
-    background-color: #001550;
-   
-    }
-
-.img-footer{
-    width: 70px;
-    height: 70px;
-
+.navFoot-color {
+  background-color: #001550;
 }
 
-@media(max-width:563px){
-    .img-footer{
-        width: 45px;
-        height: 45px;
-    }
-    
+.img-footer {
+  width: 70px;
+  height: 70px;
 }
 
-@media(max-width:280px){
-    .img-footer{
-        width: 35px;
-        height: 35px;
-    }
-    
+@media (max-width: 563px) {
+  .img-footer {
+    width: 45px;
+    height: 45px;
+  }
 }
 
-.img-cart{
-    width: 30px;
-    height: 30px;
+@media (max-width: 280px) {
+  .img-footer {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.img-cart {
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-toggler-icon1 {
-    cursor: pointer !important;
-  }
-
-
-.box-titles{
-    background-color: #001550;
-    color: aliceblue;
-    margin: 20px;
-    padding: 20px;
-    size: 20px;
-    text-align: center;
-
+  cursor: pointer !important;
 }
 
-
-.box-form{
-    background-color: #254e95;
-    margin: 20px;
-    padding: 20px;
-   border-radius: 30px;
-
+.box-titles {
+  background-color: #001550;
+  color: aliceblue;
+  margin: 20px;
+  padding: 20px;
+  size: 20px;
+  text-align: center;
 }
 
+.box-form {
+  background-color: #254e95;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+}
 
+.containers {
+  background-color: #001550;
+}
 
-
- .containers{
-    background-color: #001550;
-   
-    }
-
+.bi-google:hover {
+  fill: #f74925;
+}
+.bi-facebook:hover {
+  fill: #38529a;
+}
