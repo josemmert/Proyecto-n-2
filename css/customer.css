@@ -1,5 +1,13 @@
-.navFoot-color {
+
+
+.navFoot-color{
     background-color: #c1d1fc;
+    }
+
+
+.img-footer{
+    width: 70px;
+    height: 70px;
 }
 
 .custom-text{
@@ -10,23 +18,29 @@
     color: #fff;
 }
 
-.img-footer {
-  width: 70px;
-  height: 70px;
+
+@media(max-width:563px){
+    .img-footer{
+        width: 45px;
+        height: 45px;
+    }
+    
+    .img-log{
+        width: 150px;
+        
 }
 
-@media (max-width: 563px) {
-  .img-footer {
-    width: 45px;
-    height: 45px;
-  }
 }
 
-@media (max-width: 280px) {
-  .img-footer {
-    width: 35px;
-    height: 35px;
-  }
+@media(max-width:280px){
+    .img-footer{
+        width: 35px;
+        height: 35px;
+    }
+
+    .img-log{
+        width: 100px;
+        }
 }
 
 .img-cart {
@@ -51,7 +65,7 @@
   background-color: #254e95;
   margin: 20px;
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 .containers {
@@ -60,6 +74,7 @@
 
 .bi-google:hover {
   fill: #f74925;
+
 }
 
 .bi-facebook:hover {
