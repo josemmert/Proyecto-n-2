@@ -1,3 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ nav{
+    height: 80px;
+}
+
+main {
+    margin-top: 80px;
+   
+}
+
 .navFoot-color{
     background-color: #c1d1fc;
     }
@@ -13,6 +27,18 @@
 
 .custom-text:hover{
     color: #fff;
+}
+
+.name-text-close{
+    color: #a8befa;
+}
+
+.name-text-open{
+    color: #FD972B;
+}
+
+.text-card{
+    color: #1D215E;
 }
 
 @media(max-width:563px){
@@ -31,10 +57,10 @@
     
 }
 
-.img-cart{
+/* .img-cart{
     width: 30px;
     height: 30px;
-}
+} */
 
 .navbar-toggler-icon1 {
     cursor: pointer !important;
@@ -43,23 +69,22 @@
 
 .box-titles{
     background-color: #001550;
-    color: #1D215E;
-    margin: 20px;
+    color: #c1d1fc;
     padding: 20px;
-    size: 20px;
     text-align: center;
 
 }
 
 .box-form{
-    background-color: #254e95;
+    background-color:  #1D215E;
     margin: 20px;
     padding: 20px;
     border-radius: 30px;
 }
 
 .containers{
-    background-color: #001550;
+    background-color: #c1d1fc;
+    color: #001550;
 }
 
 footer li{
@@ -67,3 +92,72 @@ footer li{
     list-style: none;
 }
 
+.mayusculas {
+    text-transform: uppercase;
+}
+
+/* .img-fond{
+    background-image: url(../img/Logo-TechCode-sin\ fondo.png);
+    background-size: contain;
+    align-items: center;
+} */
+
+@media(max-width:563px){
+    .img-footer{
+        width: 45px;
+        height: 45px;
+    }
+    
+}
+
+@media(max-width:400px){
+    .img-footer{
+        width: 35px;
+        height: 35px;
+    }
+    
+}
+
+@media(min-width:1120px){
+    .img-aboutUs{
+        width: 250px;
+        border-radius: 20px;
+    }}
+
+ @media(max-width:1120px){
+        .img-aboutUs{
+            width: 230px;
+            border-radius: 20px;
+        }
+    
+    }
+
+    @media(max-width:670px){
+        .img-aboutUs{
+            width: 200px;
+            border-radius: 20px;
+        }
+    }
+
+    @media(max-width:572px){
+        .img-aboutUs{
+            width: 280px;
+            border-radius: 20px;
+        }
+    }
+    @media(max-width:340px){
+        .img-aboutUs{
+            width: 200px;
+            border-radius: 20px;
+        }
+    }
+
+
+    @media(max-width:280px){
+        .img-aboutUs{
+            width: 220px;
+            border-radius: 20px;
+        }
+    }
+
+ 

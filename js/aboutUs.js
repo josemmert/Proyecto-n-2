@@ -8,14 +8,19 @@
           });
   
     function highlight() {
-        this.style.background = 'red';
-        this.querySelector('.pText').classList.remove('d-none')
+        this.style.background = '#FD972B';
+        this.querySelector('.pText').classList.remove('d-none');
+        this.querySelector('.name-know').classList.add('d-none');
+        this.querySelector('h2').classList.add('text-card');
     
     }
   
     function removeHighlight() {
         this.style.background = '';
-        this.querySelector('.pText').classList.add('d-none')
+        this.querySelector('.pText').classList.add('d-none');
+        this.querySelector('.name-know').classList.remove('d-none');
+        this.querySelector('h2').classList.remove('text-card');
+      
     }
  })
 
@@ -34,34 +39,34 @@
 //     }
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const questionForms = document.querySelectorAll(".question-form"); //por cada formulario
+// document.addEventListener("DOMContentLoaded", () => {
+//     const questionForms = document.querySelectorAll(".question-form"); //por cada formulario
   
-    questionForms.forEach(form => {
-      const submitButton = form.querySelector("button"); //captura button
-      const answerDiv = form.querySelector(".answer");
+//     questionForms.forEach(form => {
+//       const submitButton = form.querySelector("button"); //captura button
+//       const answerDiv = form.querySelector(".answer");
   
-      submitButton.addEventListener("click", function () {
-        askQuestion(this);
-      });
-    });
-  });
+//       submitButton.addEventListener("click", function () {
+//         askQuestion(this);
+//       });
+//     });
+//   });
   
-  function askQuestion(button) {
-    const form = button.closest(".question-form");
-    const questionInput = form.querySelector("#question"); //captura el texto que ingresa el usuario
-     const question = questionInput.value; //guarda el valor es decir el texto
+  // function askQuestion(button) {
+  //   const form = button.closest(".question-form");
+  //   const questionInput = form.querySelector("#question"); //captura el texto que ingresa el usuario
+  //    const question = questionInput.value; //guarda el valor es decir el texto
   
-    if (question.trim() !== "") {
-      // Obtener preguntas almacenadas en localStorage o inicializar un array vacío
-      const storedQuestions = JSON.parse(localStorage.getItem('questions')) || [];
+  //   if (question.trim() !== "") {
+  //     // Obtener preguntas almacenadas en localStorage o inicializar un array vacío
+  //     const storedQuestions = JSON.parse(localStorage.getItem('questions')) || [];
   
-      // Agregar la nueva pregunta al array
-      storedQuestions.push(question);
+  //     // Agregar la nueva pregunta al array
+  //     storedQuestions.push(question);
   
-      // Guardar el array actualizado en localStorage
-      localStorage.setItem('questions', JSON.stringify(storedQuestions));
+  //     // Guardar el array actualizado en localStorage
+  //     localStorage.setItem('questions', JSON.stringify(storedQuestions));
   
      
-    questionInput.value = "";
-  }}
+  //   questionInput.value = "";
+  // }}
