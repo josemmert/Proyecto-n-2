@@ -97,12 +97,12 @@
     <main class="pt-5 mt-5">
       <section class="container row mx-auto my-4">
         <article
-          class="col-12 col-sm-6 my-auto p-2 d-flex flex-column justify-content-center"
+          class="col-12 col-md-6 p-3 d-flex flex-column justify-content-center border shadow rounded-5"
           id="articleLogin"
         >
           <h2 class="text-center">Login</h2>
-          <form class="d-flex flex-column" id="formLogin">
-            <label for="emailLogin">Correo:</label>
+          <form class="d-flex flex-column p-3" id="formLogin">
+            <label for="emailLogin" class="fs-5">Correo:</label>
             <input
               type="email"
               name="emailLogin"
@@ -110,10 +110,10 @@
               placeholder="Ingresar el correo"
               minlength="8"
               maxlength="60"
-              class="mb-3 form-control"
+              class="mb-3 form-control shadow"
               required
             />
-            <label for="passwordLogin">Contraseña:</label>
+            <label for="passwordLogin" class="fs-5">Contraseña:</label>
             <input
               type="password"
               name="passwordLogin"
@@ -121,13 +121,13 @@
               placeholder="Ingresar la contraseña"
               minlength="8"
               maxlength="16"
-              class="form-control"
+              class="form-control shadow"
             />
             <div>
               <input type="submit" value="Login" class="my-4 btn btn-primary" />
             </div>
           </form>
-          <div class="mb-3">
+          <div class="mb-3 px-3">
             <button
               type="button"
               onclick="passwordRecover()"
@@ -136,7 +136,7 @@
               Recuperar contraseña
             </button>
           </div>
-          <div>
+          <div class="mt-3">
             <h4 class="text-center mb-3">Loguearse con:</h4>
             <section class="d-flex justify-content-center">
               <a href="#" class="mx-5 link-secondary"
@@ -171,7 +171,7 @@
           </div>
         </article>
         <article
-          class="col-12 col-sm-6 text-center d-flex flex-column justify-content-center"
+          class="col-12 col-md-6 text-center d-flex flex-column justify-content-center"
           id="imgLogin"
         >
           <img
@@ -180,7 +180,7 @@
             class="img-fluid mx-auto"
           />
         </article>
-        <article class="col-12 col-sm-6 text-center d-none" id="imgRegister">
+        <article class="col-12 col-md-6 text-center d-none" id="imgRegister">
           <img
             src="../img/login.jpg"
             alt="Foto de celular"
@@ -188,12 +188,12 @@
           />
         </article>
         <article
-          class="col-12 col-sm-6 my-auto p-2 d-none"
+          class="col-12 col-md-6 my-auto p-2 d-none"
           id="articleRegister"
         >
-          <h2 class="text-center">Registro</h2>
-          <form class="d-flex flex-column" id="formRegister">
-            <label for="nameRegister">Nombre completo:</label>
+          <h2 class="text-center mt-2">Registro</h2>
+          <form class="d-flex flex-column px-3" id="formRegister">
+            <label for="nameRegister" class="fs-5">Nombre completo:</label>
             <input
               type="text"
               name="nameRegister"
@@ -202,9 +202,9 @@
               minlength="7"
               maxlength="60"
               required
-              class="mb-3 form-control"
+              class="mb-3 form-control shadow"
             />
-            <label for="emailRegister">Correo:</label>
+            <label for="emailRegister" class="fs-5">Correo:</label>
             <input
               type="email"
               name="emailRegister"
@@ -213,9 +213,9 @@
               minlength="8"
               maxlength="60"
               required
-              class="mb-3 form-control"
+              class="mb-3 form-control shadow"
             />
-            <label for="passwordRegister">Contraseña:</label>
+            <label for="passwordRegister" class="fs-5">Contraseña:</label>
             <input
               type="password"
               name="passwordRegister"
@@ -225,9 +225,11 @@
               maxlength="16"
               required
               pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
-              class="mb-3 form-control"
+              class="mb-3 form-control shadow"
             />
-            <label for="passwordRegister2">Repetir contraseña:</label>
+            <label for="passwordRegister2" class="fs-5"
+              >Repetir contraseña:</label
+            >
             <input
               type="password"
               name="passwordRegister2"
@@ -236,7 +238,7 @@
               minlength="8"
               maxlength="16"
               required
-              class="mb-3 form-control"
+              class="mb-3 form-control shadow"
               pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
             />
             <p class="fst-italic h6">
@@ -246,7 +248,7 @@
                 tener otros símbolos.
               </small>
             </p>
-            <label for="acepted"
+            <label for="acepted" class="fs-5"
               >Quiero recibir anuncios y promociones
               <input type="checkbox" name="acepted" id="acepted" />
             </label>
