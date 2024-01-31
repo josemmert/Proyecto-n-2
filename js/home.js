@@ -7,7 +7,7 @@ let swiper = new Swiper(".mySwiper",{
     slidesPerView: "auto",
     loop: true,
     coverflowEffect: {
-        depth:500,
+        depth:100,
         modifer:1,
         slidesShadows:true,
         rotate:0,

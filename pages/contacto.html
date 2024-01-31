@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="fs-4">
         <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/index.html">
@@ -31,10 +31,10 @@
                                     <a class="nav-link text-light" href="../index.html">Inicio</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
+                                    <a class="nav-link text-light" href="aboutUs.html">Acerca de Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light" href=#>Contactos</a>
+                                    <a class="nav-link text-light" href="contacto.html">Contactos</a>
                                 </li>
                             </ul>
                         </div>
@@ -52,7 +52,7 @@
                                 <a class="nav-link text-light" id='IsButton' href="./login-register.html?action=login">Iniciar sesión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-light" id='CsButton' onclick="logOut()" >Cerrar sesión</a>
+                                <a class="nav-link text-light d-none" id='CsButton' onclick="logOut()" >Cerrar sesión</a>
                             </li>
                         </ul>
                     </div>
@@ -60,7 +60,7 @@
             </nav>
         </header>
 
-    <main class="container-fluid">
+    <main class="container-fluid bg-light">
 
         <section class="my-3 container-fluid">
             <h1 class="display-2 text-center pt-5">Contacto</h1>
@@ -134,35 +134,19 @@
               </div>
             </article>
           </section>
-
-        <!-- <form class="contact-form" id="formularioContacto">
-            <label class="contact-label" for="nombre">Nombre:</label>
-            <input class="contact-data" type="text" id="nombre" name="nombre" required>
-            <div id="errorNombre" class="error"></div>
-    
-            <label class="contact-label" for="email">Email:</label>
-            <input class="contact-data" type="email" id="email" name="email" required>
-            <div id="errorEmail" class="error"></div>
-    
-            <label class="contact-label" for="consulta">Consulta u Opinión:</label>
-            <textarea class="contact-data" id="consulta" name="consulta" rows="4" required></textarea>
-            <div id="errorConsulta" class="error"></div>
-    
-            <button class="contact-button" type="button" onclick="enviarFormulario()">Enviar</button>
-        </form> -->
         
     </main>
 
-    <footer class="navFoot-color d-lg-flex justify-content-around">
+    <footer class="navFoot-color d-lg-flex justify-content-around fs-4">
         <div class="text-center border border-secondary border-1">
             <img class="img-footer" src="../img/log.jpg">
             <p class="text-center">&copy Techcode 2023</p>
         </div>
 
             <li class="text-center nav-item"> 
-            <a class="nav-link text-white text-md-center" href="../pages/error.html">Acerca de Nosotros</a></li>
+            <a class="nav-link text-white text-md-center" href="aboutUs.html">Acerca de Nosotros</a></li>
             <li class="text-center nav-item ">
-            <a class="nav-link text-white" href="../pages/error.html">Contactos</a></li>
+            <a class="nav-link text-white" href="contacto.html">Contactos</a></li>
    
 
         <div class="text-center my-3 p-2 ">

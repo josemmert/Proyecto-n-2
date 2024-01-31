@@ -53,6 +53,13 @@
 .bi-google:hover {
   fill: #f74925;
 }
+
 .bi-facebook:hover {
   fill: #38529a;
 }
+
+footer li{
+    text-decoration: none;
+    list-style: none;
+}
+
