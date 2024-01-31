@@ -1,11 +1,8 @@
-body {
-        font-family: 'Staatliches', sans-serif;
-}
+
 
 .navFoot-color{
     background-color: #c1d1fc;
     }
-
 
 
 .img-footer{
@@ -20,7 +17,6 @@ body {
 .custom-text:hover{
     color: #fff;
 }
-
 
 
 @media(max-width:563px){
@@ -44,38 +40,45 @@ body {
 
     .img-log{
         width: 100px;
-        
+        }
 }
 
-.img-cart{
-    width: 30px;
-    height: 30px;
+.img-cart {
+  width: 30px;
+  height: 30px;
 }
 
 .navbar-toggler-icon1 {
-    cursor: pointer !important;
+  cursor: pointer !important;
 }
 
+.box-titles {
+  background-color: #1D215E;
+  color: #fff;
+  margin: 20px;
+  padding: 20px;
+  size: 20px;
+  text-align: center;
+}
 
-.box-titles{
-    background-color: #001550;
-    color: #1D215E;
-    margin: 20px;
-    padding: 20px;
-    size: 20px;
-    text-align: center;
+.box-form {
+  background-color: #254e95;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.containers {
+  background-color: #1D215E;
+}
+
+.bi-google:hover {
+  fill: #f74925;
 
 }
 
-.box-form{
-    background-color: #254e95;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.containers{
-    background-color: #001550;
+.bi-facebook:hover {
+  fill: #38529a;
 }
 
 footer li{
