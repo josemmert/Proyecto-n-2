@@ -9342,7 +9342,7 @@ fieldset:disabled .btn {
     font-size: calc(1.3rem + .6vw) !important
 }
 
-.fs-4 {
+.fs-5 {
     font-size: calc(1.275rem + .3vw) !important
 }
 
@@ -13843,7 +13843,7 @@ fieldset:disabled .btn {
         font-size: 1.75rem !important
     }
 
-    .fs-4 {
+    .fs-5 {
         font-size: 1.5rem !important
     }
 }
