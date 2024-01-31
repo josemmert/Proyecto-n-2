@@ -6,6 +6,8 @@ body {
     background-color: #c1d1fc;
     }
 
+
+
 .img-footer{
     width: 70px;
     height: 70px;
@@ -19,11 +21,19 @@ body {
     color: #fff;
 }
 
+
+
 @media(max-width:563px){
     .img-footer{
         width: 45px;
         height: 45px;
     }
+    
+    .img-log{
+        width: 150px;
+        
+}
+
 }
 
 @media(max-width:280px){
@@ -31,6 +41,10 @@ body {
         width: 35px;
         height: 35px;
     }
+
+    .img-log{
+        width: 100px;
+        
 }
 
 .img-cart{
