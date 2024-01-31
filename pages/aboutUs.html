@@ -1,117 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content=">Grupo6 80i" />
-  <meta name="description" content="Proyecto JavaScript" />
-  <meta name="keywords" content="html, css3, bootstrap, pages, javascript, etc" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="../css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../css/customer.css">
-
-<body>
-  <header class="fs-5">
-
-  </header>
-  <main class="bg-light">
-
-    <div>
-      <p class="containers box-titles">Proyecto Nº2 - Equipo 6 - Comisión 80i</p>
-    </div>
-  
-    <div>
-  
-      <p class='containers box-titles'>TECHCODE</p>
-  
-      <p class="m-3">
-        Nuestro equipo de trabajo se destaca por la gran participación de
-        cada uno de sus miembros, la colaboración y sobre todo el respeto.
-      </p>
-  
-  
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-3 d-block text-center box-form person">
-            <img src="../img/avatar (1).png" class="w-50">
-            <h2>RODRIGO</h2>
-            <p>CONOCEME!</p>
-            <div class="pText d-none">
-            <p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum rem, iste voluptatum nihil repudiandae eveniet id omnis cupiditate ab ipsa in neque laboriosam harum veniam! Deserunt laborum inventore aliquid.
-              <form class="question-form">
-                <label for="question">¿Quieres hacerme una pregunta?</label>
-                <div>
-                <input type="text" id="question" name="question" placeholder="Escribe tu pregunta" maxlength="100" minlength="10" required>
-                <button type="button" class="btn-secondary rounded-bottom-2" onclick="askQuestion(this)">Enviar</button>
-                </div>
-              </form>
-            </p></div>
-           
-          </div>
-          <div class="col-12 col-md-3 d-block text-center box-form">
-            <img src="../img/avatar (1).png" class="w-50">
-            <h2>ZOLEICA</h2>
-            <p>CONOCEME !</p>
-            <p class="pText d-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum rem, iste voluptatum nihil repudiandae eveniet id omnis cupiditate ab ipsa in neque laboriosam harum veniam! Deserunt laborum inventore aliquid. </p>
-          </div>
-          <div class="col-12 col-md-3 d-block text-center box-form">
-            <img src="../img/avatar (1).png" class="w-50">
-            <h2>NOMBRE 1</h2>
-            <p>CONOCEME !</p>
-            <p class="pText d-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum rem, iste voluptatum nihil repudiandae eveniet id omnis cupiditate ab ipsa in neque laboriosam harum veniam! Deserunt laborum inventore aliquid. </p>
-          </div>
-          <div class="col-12 col-md-3 d-block text-center box-form">
-            <img src="../img/avatar (1).png" class="w-50">
-            <h2>NOMBRE 1</h2>
-            <p>CONOCEME !</p>
-            <p class="pText d-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum rem, iste voluptatum nihil repudiandae eveniet id omnis cupiditate ab ipsa in neque laboriosam harum veniam! Deserunt laborum inventore aliquid.</p>
-          </div>
-          <div class="col-12 col-md-3 d-block text-center box-form">
-            <img src="../img/avatar (1).png" class="w-50">
-            <h2>NOMBRE 1</h2>
-            <p>CONOCEME !</p>
-            <p class="pText d-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum rem, iste voluptatum nihil repudiandae eveniet id omnis cupiditate ab ipsa in neque laboriosam harum veniam! Deserunt laborum inventore aliquid.</p>
-          </div>
-          <div class="col-12 col-md-3 d-block text-center box-form">
-            <img src="../img/avatar (1).png" class="w-50">
-            <h2>NOMBRE 1</h2>
-            <p>CONOCEME !</p>
-            <p class="pText d-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum rem, iste voluptatum nihil repudiandae eveniet id omnis cupiditate ab ipsa in neque laboriosam harum veniam! Deserunt laborum inventore aliquid.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content=">Grupo6 80i" />
+    <meta name="description" content="Proyecto JavaScript" />
+    <meta
+      name="keywords"
+      content="html, css3, bootstrap, pages, javascript, etc"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/customer.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.ico.png" type="image/x-icon" />
+    <title>TechCode</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="/img/TECHCODE-Logo.png" alt="Techcode" width="200" class="py-2" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon text-bg-light"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link custom-text" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-text" href="../pages/aboutUs.html">Acerca de Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-text" href="../pages/contacto.html">Contactos</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-flex justify-content-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link custom-text d-none"
+                  id="li-ad"
+                  href="../pages/admin.html"
+                  >Administración</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link custom-text d-none"
+                  id="li-cl"
+                  href="../pages/cart.html"
+                  data-toggle="modal"
+                  data-target="#cartModal"
+                  >Carrito</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link custom-text"
+                  id="IsRegister"
+                  href="../pages/login-register.html?action=register"
+                  >Registrarse</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link custom-text"
+                  id="IsButton"
+                  href="../pages/login-register.html?action=login"
+                  >Iniciar sesión</a
+                >
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link custom-text d-none"
+                  id="CsButton"
+                  onclick="logOut()"
+                >
+                  Cerrar sesión
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
+      </nav>
+    </header>
+  <main>
+    <p class="box-titles">Proyecto Nº2 - Equipo 6 -TECHCODE</p>
+    <p class="mayusculas p-2 box-titles">
+      "Un proyecto hecho con pasión, diseñado para inspirar. Únete a nosotros mientras exploramos el emocionante mundo de los smartphones"
+    </p>
+
+
+    <div class="container-fluid">
+      <div class="row justify-content-around">
+        <div class="col-12 col-sm-5 col-lg-3 text-center box-form">
+          <div class="d-flex justify-content-center">
+          <img src="../img/caricaturas/esteban.png" class="img-aboutUs">
+        </div>
+          <h2 class="name-text-close">ESTEBÁN</h2>
+          <p class="name-text-close name-know">CONOCEME!</p>
+          <div class="pText d-none">
+          <p >Soy Esteban Barrionuevo, tengo 24 años, soy graduado en la tecnicatura en programación UTN y actualmente trabajo en Telematica como soporte IT. Mis hobbies son entrenar y jugar.
+          </p></div>
+         
+        </div>
+        <div class="col-12 col-sm-5 col-lg-3 text-center box-form">
+          <div class="d-flex justify-content-center">
+          <img src="../img/caricaturas/felix.png" class="img-aboutUs ">
+          </div>
+          <h2 class="name-text-close">FELIX</h2>
+          <p class="name-text-close name-know">CONOCEME !</p>
+          <p class="pText d-none">Soy Felix Eloy Lamas tengo 36 años, actualmente trabajo en Teleperformance como soporte de IT, padre de dos hermosas niñas, estudiante de la carrera de programador universitario en la UNT y estudiante de Rolling, me gusta el fútbol y el ciclismo. </p>
+        </div>
+        <div class="col-12 col-sm-5 col-lg-3  text-center box-form">
+          <div class="d-flex justify-content-center">
+          <img src="../img/caricaturas/hernan.png" class="img-aboutUs">
+          </div>
+          <h2 class="name-text-close">HERNÁN</h2>
+          <p class="name-text-close name-know">CONOCEME !</p>
+          <p class="pText d-none">Soy Hernán Lobo, 23 años de edad. Futuro estudiante de Programación en UTN y actual estudiante de RollingCode School. Trabajo actualmente en Teleperformance y también de entrenador de musculación. Mí interés por la programación se abarca por lo dinámico que resulta el rubro y la creatividad que se puede aplicar en el mismo. Mis hobbies son entrenar y hacer trekking. </p>
+        </div>
+        <div class="col-12 col-sm-5 col-lg-3 text-center box-form">
+          <div class="d-flex justify-content-center">
+          <img src="../img/caricaturas/jose.png" class="img-aboutUs">
+          </div>
+          <h2 class="name-text-close">JOSÉ</h2>
+          <p class="name-text-close name-know">CONOCEME !</p>
+          <p class="pText d-none">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam cum rem, iste voluptatum nihil repudiandae eveniet id omnis cupiditate ab ipsa in neque laboriosam harum veniam! Deserunt laborum inventore aliquid.</p>
+        </div>
+        <div class="col-12 col-sm-5 col-lg-3 text-center box-form">
+          <div class="d-flex justify-content-center">
+          <img src="../img/caricaturas/leandro.png" class="img-aboutUs">
+          </div>
+          <h2 class="name-text-close">LEANDRO</h2>
+          <p class="name-text-close name-know">CONOCEME !</p>
+          <p class="pText d-none">Soy Leandro Martinez Bader, tengo 32 años, trabajo en la Municipalidad de Yerba buena. Mi interés por la informática me ha llevado a estudiar programación. Disfruto de actividades al aire libre. Mis hobbyes son jugar al futbol y al tenis.</p>
+        </div>
+        <div class="col-12 col-sm-5 col-lg-3 text-center box-form">
+          <div class="d-flex justify-content-center">
+          <img src="../img/caricaturas/Zoleica.png" class="img-aboutUs">
+          </div>
+          <h2 class="name-text-close">ZOLEICA</h2>
+          <p class="name-text-close name-know">CONOCEME !</p>
+          <p class="pText d-none">Soy Zoleica Simón, tengo 34 años. Soy Biotecnologa, trabajo como profe de Biología en un secundario y hago investigación. Hace un año me despertó la curiosidad de estudiar programación y análisis de datos, para en un futuro generar programas en equipos que automaticen procesos biotecnológicos. Me gusta el gym y pasar tiempo con mi gatita.</p>
+        </div>
+      </div>
       </div>
   </main>
-  <footer class="navFoot-color d-lg-flex justify-content-around fs-5">
-    <div class="text-center border border-secondary border-1">
-      <img class="img-footer" src="../img/log.jpg" />
-      <p class="text-center">&copy Techcode 2023</p>
+    <footer class="navFoot-color d-lg-flex justify-content-around">
+      <div class="text-center">
+        <img class="img-fluid" src="/img/TECHCODE-Logo.png" />
+        <p class="text-center">&copy Techcode 2023</p>
+      </div>
+       <div class="m-5">
+      <li class="text-center">
+        <a class="nav-link custom-text-ft" href="../pages/aboutUs.html"
+          >Acerca de Nosotros</a
+        >
+      </li>
+      <li class="text-center p-2">
+        <a class="nav-link custom-text-ft" href="../pages/contacto.html">Contactos</a>
+      </li>
     </div>
-
-    <li class="text-center nav-item">
-      <a class="nav-link text-white text-md-center" href="../pages/error.html"
-        >Acerca de Nosotros</a
-      >
-    </li>
-    <li class="text-center nav-item">
-      <a class="nav-link text-white" href="../pages/error.html">Contactos</a>
-    </li>
-
-    <div class="text-center my-3 p-2">
-      <a href="https://www.facebook.com" target="_blank"
-        ><img class="img-footer p-2" src="../img/facebook.png"
-      /></a>
-      <a href="https://www.whatsapp.com" target="_blank"
-        ><img class="img-footer p-2" src="../img/whatsapp.png"
-      /></a>
-      <a href="https://www.instagram.com" target="_blank"
-        ><img class="img-footer p-2" src="../img/instagram.png"
-      /></a>
-    </div>
-  </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <div class="text-center my-3 p-2">
+        <a href="https://www.facebook.com" target="_blank"
+          ><img class="img-footer p-2" src="../img/facebook.png"
+        /></a>
+        <a href="https://www.whatsapp.com" target="_blank"
+          ><img class="img-footer p-2" src="../img/whatsapp.png"
+        /></a>
+        <a href="https://www.instagram.com" target="_blank"
+          ><img class="img-footer p-2" src="../img/instagram.png"
+        /></a>
+      </div>
+    </section>
+    </footer>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/navdarFooter.js"></script>
     <script src="../js/aboutUs.js"></script>
-</body>
-
+    <script type="module" src="../js/appNF.js"></script>
+  </body>
 </html>
