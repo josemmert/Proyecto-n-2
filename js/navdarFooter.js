@@ -9,7 +9,7 @@ pageSelected.forEach(element => {
 
 function highlight() {
   this.querySelector('a').style.background= '#1D215E'; 
-  this.querySelector('a').style.borderRadius= '50px';
+  this.querySelector('a').style.borderRadius= '30px';
 }
 
 function removeHighlight() {

@@ -1,20 +1,7 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
- nav{
-    height: 80px;
-}
-
-main {
-    margin-top: 80px;
-   
-}
-
 .navFoot-color{
     background-color: #c1d1fc;
     }
+
 
 .img-footer{
     width: 70px;
@@ -28,6 +15,7 @@ main {
 .custom-text:hover{
     color: #fff;
 }
+
 
 .name-text-close{
     color: #a8befa;
@@ -47,6 +35,11 @@ main {
         height: 45px;
     }
     
+    .img-log{
+        width: 150px;
+        
+}
+
 }
 
 @media(max-width:280px){
@@ -54,16 +47,29 @@ main {
         width: 35px;
         height: 35px;
     }
-    
+
+    .img-log{
+        width: 100px;
+        }
 }
 
-/* .img-cart{
-    width: 30px;
-    height: 30px;
-} */
+
+.img-cart {
+  width: 30px;
+  height: 30px;
+}
 
 .navbar-toggler-icon1 {
-    cursor: pointer !important;
+  cursor: pointer !important;
+}
+
+.box-titles {
+  background-color: #1D215E;
+  color: #fff;
+  margin: 20px;
+  padding: 20px;
+  size: 20px;
+  text-align: center;
 }
 
 
@@ -73,18 +79,24 @@ main {
     padding: 20px;
     text-align: center;
 
+.box-form {
+  background-color: #254e95;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.box-form{
-    background-color:  #1D215E;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 30px;
+.containers {
+  background-color: #1D215E;
 }
 
-.containers{
-    background-color: #c1d1fc;
-    color: #001550;
+.bi-google:hover {
+  fill: #f74925;
+
+}
+
+.bi-facebook:hover {
+  fill: #38529a;
 }
 
 footer li{
@@ -96,11 +108,7 @@ footer li{
     text-transform: uppercase;
 }
 
-/* .img-fond{
-    background-image: url(../img/Logo-TechCode-sin\ fondo.png);
-    background-size: contain;
-    align-items: center;
-} */
+
 
 @media(max-width:563px){
     .img-footer{
