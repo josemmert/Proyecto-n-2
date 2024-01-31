@@ -1,5 +1,13 @@
 .navFoot-color {
-  background-color: #001550;
+    background-color: #c1d1fc;
+}
+
+.custom-text{
+    color: #1D215E;
+}
+
+.custom-text:hover{
+    color: #fff;
 }
 
 .img-footer {
@@ -31,8 +39,8 @@
 }
 
 .box-titles {
-  background-color: #001550;
-  color: aliceblue;
+  background-color: #1D215E;
+  color: #fff;
   margin: 20px;
   padding: 20px;
   size: 20px;
@@ -47,7 +55,7 @@
 }
 
 .containers {
-  background-color: #001550;
+  background-color: #1D215E;
 }
 
 .bi-google:hover {
