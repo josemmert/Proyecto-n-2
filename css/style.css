@@ -173,3 +173,14 @@ header, footer{
   padding: 20px;
   margin-bottom: 20px;
 }
+
+
+.btn-custom-add{
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+}
+
+.btn-custom-add:hover{
+    background-color: var(--color-azul);
+    color: var(--color-naranja);
+}

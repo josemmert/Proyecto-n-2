@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p><span class="fw-bold">Stock: </span>${product.stock}</p>
                         </div>
                         <div class="d-flex justify-content-center mb-3 mb-lg-0">
-                            <button id="btn-add-cart" class="btn btn-primary">Agregar al carrito</button>
+                            <button id="btn-add-cart" class="btn btn-custom-add fw-bold">Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
             </div>
             <hr class="container">
-            <div class="container mb-5">
+            <div class="container pb-5">
                 <p class="h4 mb-5">Características técnicas</p>
                 <div class="row">
                     <div class="col-6 col-lg-4 mx-auto d-flex flex-column justify-content-between">
@@ -106,8 +106,14 @@ function addToCart(product) {
     // Guardar el carrito actualizado en el localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    // Mostrar un mensaje de éxito (puedes cambiar esto según tus necesidades)
-    alert(`Producto "${product.modelo}" agregado al carrito. ¡Listo para comprar!`);
+    Swal.fire({
+        position: "top-center",
+        color: "#212121",
+        icon: "success",
+        title: `Se agrego al carrito!`,
+        showConfirmButton: false,
+        timer: 1500,
+});
 }
 
 
