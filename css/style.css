@@ -15,7 +15,7 @@
 
 
 main{
-    margin-top: 45px;
+    margin-top: 40px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -26,37 +26,54 @@ header, footer{
 
 /* .imgcarrusel{
     height: 600px;
-    width: 1600px;
+    width: 800px;
     object-fit: fill;
 } */
 
-@media (max-width: 345px) {
+/* @media (max-width: 345px) {
     .imgcarrusel {
       height: 160px;
-      width: 100px;
+      width: 300px;
       object-fit: cover;
     }
 }
   
-  @media (min-width: 600px) {
-    
-    .imgcarrusel {
-      height: 300px;
-      width: 800px;
-      object-fit: fill ;
-    }
-    
+@media (max-width: 1060px) {
+  
+  .imgcarrusel {
+    height: 500px;
+    width: 800px;
+    object-fit: cover ;
+  }
+  
 }
-
-@media (min-width: 800px) {
-    
-    .imgcarrusel {
-      height: 450px;
-      width: 800px;
-      object-fit: contain ;
-    }
-    
+@media (max-width: 898px) {
+  
+  .imgcarrusel {
+    height: 400px;
+    width: 600px;
+    object-fit: cover ;
+  }
+  
 }
+@media (max-width: 738px) {
+  
+  .imgcarrusel {
+    height: 350px;
+    width:  300px;
+    object-fit: fill ;
+  }
+  
+}
+@media (max-width: 630px) {
+  
+  .imgcarrusel {
+    height: 250px;
+    width:  280px;
+    object-fit: cover ;
+  }
+  
+} */
 
 
 
@@ -141,15 +158,22 @@ header, footer{
     color: black;
 }
 
-@media (min-width: 1280px) {
-    .payments {
-      display: flex;
-      justify-content: center;
+.sales {
+    margin: 25px 0;
+    height: 350px;
+    width: 100%;
+}
+
+
+@media (max-width: 750px) {
+    .sales {
+      height: 250px;
+      width: 100%;
     }
 }
 @media (max-width: 1280px) {
     .payments {
-      display: none;
+      
     }
 }
 
