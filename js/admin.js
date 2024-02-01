@@ -239,6 +239,15 @@ window.CargarEdicion = function (codigo){
     const productoAEditar = arrayProductos.find((element) => {
         return element.codigo === codigo;
     });
+    inputModelo.className = "form-control";
+  inputPantalla.className = "form-control";
+  inputMemoria.className = "form-control";
+  inputAlmacenamiento.className = "form-control";
+  inputCamara.className="form-control";
+  inputDescripcion.className = "form-control";
+  inputPrecio.className = "form-control";
+  inputUrlImg.className = "form-control";
+  inputStock.className = "form-control";
 
     if(productoAEditar !== undefined){
         inputCodigo.value = productoAEditar.codigo;
