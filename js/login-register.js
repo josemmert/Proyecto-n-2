@@ -1,4 +1,3 @@
-
 import {
   LoadUserAdmin,
   ValidateForm,
@@ -7,7 +6,6 @@ import {
   validateName,
   validatePassword,
 } from "./helpers.js";
-
 
 LoadUserAdmin();
 let listUsers = JSON.parse(localStorage.getItem("Users"));
@@ -19,10 +17,10 @@ let imgRegister = document.getElementById("imgRegister");
 let articleRegister = document.getElementById("articleRegister");
 // ----------------Regitro-----------------------------------
 if (action === "register") {
-  articleLogin.className = `col-12 col-sm-6 my-auto p-2 d-none`;
-  imgLogin.className = `col-12 col-sm-6 text-center d-none`;
-  imgRegister.className = `col-12 col-sm-6 text-center d-flex flex-column justify-content-center order-2 order-sm-1  `;
-  articleRegister.className = `col-12 col-sm-6 my-auto p-2 order-1 order-sm-2`;
+  articleLogin.className = `col-12 col-md-6 my-auto p-2 d-none`;
+  imgLogin.className = `ccol-12 col-md-6 text-center d-none`;
+  imgRegister.className = `col-12 col-md-6 text-center d-flex flex-column justify-content-center order-2 order-md-1  `;
+  articleRegister.className = `col-12 col-md-6 my-auto p-2 order-1 order-md-2 border shadow rounded-5`;
 
   let nameRegister = document.getElementById("nameRegister");
   let emailRegister = document.getElementById("emailRegister");
@@ -153,4 +151,3 @@ window.passwordRecover = function () {
     }
   });
 };
-
