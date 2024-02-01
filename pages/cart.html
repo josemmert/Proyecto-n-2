@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Grupo6 80i" />
-    <meta name="description" content="Carrito de Compras" />
-    <meta name="keywords" content="html, css, javascript, carrito de compras" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/customer.css" />
-
     <title>Carrito de Compras</title>
   </head>
 
@@ -17,8 +15,8 @@
     <header class="fs-5">
       <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">
-            <img src="../img/log.jpg" alt="Techcode" width="70" height="70" />
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/TECHCODE-Logo.png" class="img-log" alt="Techcode" width="200" class="py-2" />
           </a>
           <button
             class="navbar-toggler"
@@ -37,127 +35,93 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-light" href="../index.html">Inicio</a>
+                <a class="nav-link custom-text" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
+                <a class="nav-link custom-text" href="./aboutUs.html">Acerca de Nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Contactos</a>
+                <a class="nav-link custom-text" href="./contacto.html">Contactos</a>
               </li>
             </ul>
             <ul class="navbar-nav d-flex justify-content-center">
               <li class="nav-item">
-                <a
-                  class="nav-link text-light d-none"
-                  id="li-ad"
-                  href="../pages/admin.html"
-                  >Administración</a
-                >
+                <a class="nav-link custom-text d-none" id="li-ad" href="./admin.html">Administración</a>
               </li>
               <li class="nav-item">
-                <button
-                  class="nav-link text-light"
-                  id="CsButton"
-                  onclick="logOut()"
-                >
-                  Cerrar sesión
-                </button>
+                <a class="nav-link custom-text d-none" id="li-cl" href="./cart.html" data-toggle="modal" data-target="#cartModal">Carrito</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-text" id="IsRegister" href="./login-register.html?action=register">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-text" id="IsButton" href="./login-register.html?action=login">Iniciar sesión</a>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link custom-text d-none" id="CsButton" onclick="logOut()">Cerrar sesión</button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-
     <main class="container my-5 bg-light">
         <h1 class="text-center mb-4">Carrito de Compras</h1>
       
         <div id="cart" class="row mb-4">
             <div class="col-md-4">
+
               <div class="card">
-                <img src="../img/homeImg/i15promax.jpg" class="card-img-top" alt="Producto 1">
-                <div class="card-body">
-                  <h5 class="card-title">Producto 1</h5>
-                  <p class="card-text">
-                    Detalle ejemplo
-                  </p>
-                  <p class="card-price">Precio: $100.00</p>
-                  <button class="btn btn-danger btn-remove" data-product-id="1">Eliminar</button>
-                </div>
+                  <img src="../img/ejemplo.jpg" class="card-img-top" alt="Ejemplo de Producto">
+                  <div class="card-body">
+                      <h5 class="card-title">Ejemplo de Producto</h5>
+                      <p class="card-text">
+                          Detalle del producto ejemplo.
+                      </p>
+                      <p class="card-price">Precio: $99.99</p>
+                      <button class="btn btn-danger btn-remove" data-product-id="1">Eliminar</button>
+                  </div>
               </div>
-            </div>
-          
-            <div class="col-md-4">
-              <div class="card">
-                <img src="../img/homeImg/s23ultra.jpg" class="card-img-top" alt="Producto 2">
-                <div class="card-body">
-                  <h5 class="card-title">Producto 2</h5>
-                  <p class="card-text">
-                    Detalle ejemplo
-                  </p>
-                  <p class="card-price">Precio: $150.00</p>
-                  <button class="btn btn-danger btn-remove" data-product-id="2">Eliminar</button>
-                </div>
-              </div>
-            </div>
-          
-            <div class="col-md-4">
-              <div class="card">
-                <img src="../img/homeImg/s21+.png" class="card-img-top" alt="Producto 3">
-                <div class="card-body">
-                  <h5 class="card-title">Producto 3</h5>
-                  <p class="card-text">
-                    Detalle ejemplo
-                  </p>
-                  <p class="card-price">Precio: $120.00</p>
-                  <button class="btn btn-danger btn-remove" data-product-id="3">Eliminar</button>
-                </div>
-              </div>
-            </div>
           </div>
-      
-          <div class="text-end">
-            <p>Total: $<span id="cart-total">0.00</span></p>
-            <button class="btn btn-primary btn-pay">Pagar</button>
-          </div>
-        </main>
+          -->
+      </div>
+  
+      <div class="text-end">
+          <p>Total: $<span id="cart-total">0.00</span></p>
+          <button class="btn btn-primary btn-pay">Pagar</button>
+      </div>
+  </main>
 
     <footer class="navFoot-color d-lg-flex justify-content-around fs-5">
-      <div class="text-center border border-secondary border-1">
-        <img class="img-footer" src="../img/log.jpg" />
+      <div class="text-center">
+        <img src="../img/TECHCODE-Logo.png" class="img-log" alt="logoTechCode">
         <p class="text-center">&copy Techcode 2023</p>
       </div>
-
-      <li class="text-center nav-item">
-        <a class="nav-link text-white text-md-center" href="../pages/error.html"
-          >Acerca de Nosotros</a
-        >
-      </li>
-      <li class="text-center nav-item">
-        <a class="nav-link text-white" href="../pages/error.html">Contactos</a>
-      </li>
-
-      <div class="text-center my-3 p-2">
-        <a href="https://www.facebook.com" target="_blank"
-          ><img class="img-footer p-2" src="../img/facebook.png"
-        /></a>
-        <a href="https://www.whatsapp.com" target="_blank"
-          ><img class="img-footer p-2" src="../img/whatsapp.png"
-        /></a>
-        <a href="https://www.instagram.com" target="_blank"
-          ><img class="img-footer p-2" src="../img/instagram.png"
-        /></a>
+      <div class="m-2 m-lg-5">
+        <a class="nav-link custom-text-ft text-center" href="./aboutUs.html">Acerca de Nosotros</a>
+        <a class="nav-link custom-text-ft text-center" href="./contacto.html">Contactos</a>
+      </div>
+      <div class="text-center mt-3 p-2">
+        <a href="https://www.facebook.com" target="_blank">
+          <img class="img-footer p-2" src="../img/facebook.png" alt="logoFacebook" />
+        </a>
+        <a href="https://www.whatsapp.com" target="_blank">
+          <img class="img-footer p-2" src="../img/whatsapp.png" alt="logoWhatsapp" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img class="img-footer p-2" src="../img/instagram.png" alt="logoInstagram" />
+        </a>
       </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/pag-detail.js"></script>
     <script src="../js/navdarFooter.js"></script>
     <script src="../js/cart.js"></script>
-    <script src="../js/pag-detail.js"></script>
-    <script src="../js/admin.js"></script>
     <script type="module" src="../js/appNF.js"></script>
   </body>
 </html>
