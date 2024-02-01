@@ -1,6 +1,5 @@
 import {
   CodigoAleatorio,
-  CreaPrimerosProductos,
   ValidarInputDescripcion,
   ValidarInputPrecio,
   ValidarInputStock,
@@ -13,7 +12,6 @@ import {
 
 let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
 let arrayUsuarios =JSON.parse(localStorage.getItem("Users")) || [];
-console.log(arrayUsuarios);
 let bodyTablaProductos = document.getElementById("tbodyProductos");
 let bodyTablaUsuarios = document.getElementById("tbodyUsuarios");
 let inputCodigo = document.getElementById("codigo");
@@ -69,7 +67,6 @@ inputStock.addEventListener("blur", () => {
 });
 //FIN VALIDACIONES
 
-CreaPrimerosProductos();
 
 
 ListarProductos();
@@ -332,5 +329,7 @@ window.EliminarProducto=function(codigo){
   }
 
   CheckAdmin();
+
+
 
 
