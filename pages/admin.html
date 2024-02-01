@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/customer.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/favicon.ico.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Administracion</title>
 </head>
@@ -55,7 +57,7 @@
               <a
                 class="nav-link custom-text d-none"
                 id="li-ad"
-                href="./pages/admin.html"
+                href="../pages/admin.html"
                 >Administración</a
               >
             </li>
@@ -99,71 +101,74 @@
       </div>
     </nav>
   </header>
-    <main class="container-fluid">
-        <section class="my-5 text-center titleoff">
-            <h2 id="titulo">ADMINISTRACION DE PRODUCTOS</h2>
+    <main class="container-fluid mt-5">
+        <section class=" text-center pt-5">
+            <h2 id="titulo">ADMINISTRACION DE PRODUCTOS Y USUARIOS</h2>
             <hr>
         </section>
-        <div class="container">
+        <!-- <div class="container">
             <h3>CARGAR NUEVO PRODUCTO</h3>
-        </div>
+        </div> -->
         <section class="container">
 
         <div class="row">
-            <div class="col">
+            <div class="col g-5 border border-1 shadow rounded-5">
+              <div class="container mt-3 text-center">
+                <h3>CARGAR NUEVO PRODUCTO</h3>
+            </div>
             <form>
                 <div class="my-3">
-                    <label for="codigo" class="form-label">Codigo</label>
-                    <input id="codigo" type="text" class="form-control" minlength="1" maxlength="100" required disabled>
+                    <label for="codigo" class="form-label fs-5 my-3">Código</label>
+                    <input id="codigo" type="text" class="form-control shadow" minlength="1" maxlength="100" required disabled>
                 </div>
                 <div class="my-3">
-                    <label for="marca" class="form-label">Marca</label>
-                    <select id="marca" class="form-select">
+                    <label for="marca" class="form-label fs-5">Marca</label>
+                    <select id="marca" class="form-select shadow">
                     <option selected>Motorola</option>
                     <option>Samsung</option>
                     <option>Iphone</option>
                     <option>Xiaomi</option>
                     </select>
                 </div>
-                <div class="my-3">
-                    <label for="modelo" class="form-label">Modelo</label>
-                    <input id="modelo" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese el modelo" required>
+                <div class="my-4">
+                    <label for="modelo" class="form-label fs-5">Modelo</label>
+                    <input id="modelo" type="text" class="form-control shadow" minlength="1" maxlength="60" placeholder="Ingrese el modelo del dispositivo" required>
                 </div>
                 <div class="my-3">
-                    <label for="pantalla" class="form-label">Pantalla</label>
-                    <input id="pantalla" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese el tamaño de la pantalla del dispositivo" required>
+                    <label for="pantalla" class="form-label fs-5">Pantalla</label>
+                    <input id="pantalla" type="text" class="form-control shadow" minlength="1" maxlength="60" placeholder="Ingrese el tamaño de la pantalla del dispositivo" required>
                 </div>
                 <div class="my-3">
-                    <label for="memoria" class="form-label">Memoria</label>
-                    <input id="memoria" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese la memoria RAM del dispositivo" required>
+                    <label for="memoria" class="form-label fs-5">Memoria</label>
+                    <input id="memoria" type="text" class="form-control shadow" minlength="1" maxlength="60" placeholder="Ingrese la capacidad de memoria RAM del dispositivo" required>
                 </div>
                 <div class="my-3">
-                    <label for="almacenamiento" class="form-label">Almacenamiento</label>
-                    <input id="almacenamiento" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese la capacidad de almacenamiento del dispositivo" required>
+                    <label for="almacenamiento" class="form-label fs-5">Almacenamiento</label>
+                    <input id="almacenamiento" type="text" class="form-control shadow" minlength="1" maxlength="60" placeholder="Ingrese la capacidad de almacenamiento interno del dispositivo" required>
                 </div>
                 <div class="my-3">
-                    <label for="camara" class="form-label">Camara</label>
-                    <input id="camara" type="text" class="form-control" minlength="1" maxlength="30" placeholder="Ingrese la capacidad de la camara" required>
+                    <label for="camara" class="form-label fs-5">Camara</label>
+                    <input id="camara" type="text" class="form-control shadow" minlength="1" maxlength="30" placeholder="Ingrese la capacidad de la camara" required>
                 </div>
                 <div class="my-3">
-                    <label for="descripcion" class="form-label">Descripcion</label>
-                    <textarea id="descripcion" type="text" class="form-control" placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="2000" required rows="3"></textarea>
+                    <label for="descripcion" class="form-label fs-5">Descripcion</label>
+                    <textarea id="descripcion" type="text" class="form-control shadow" placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="2000" required rows="3"></textarea>
                 </div>
                 <div class="my-3">
-                    <label for="precio" class="form-label">Precio</label>
-                    <input id="precio" type="text" class="form-control" placeholder="Ingrese el precio del producto" minlength="1" maxlength="50" required>
+                    <label for="precio" class="form-label fs-5">Precio</label>
+                    <input id="precio" type="text" class="form-control shadow" placeholder="Ingrese el precio del producto" minlength="1" maxlength="50" required>
                 </div>
                 <div class="my-3">
-                    <label for="imagen" class="form-label">URL Imagen del producto</label>
-                    <input id="imagen" type="text" class="form-control" placeholder="Ingrese la URL de la imagen" minlength="1" maxlength="200" required>
+                    <label for="imagen" class="form-label fs-5">URL Imagen del producto</label>
+                    <input id="imagen" type="text" class="form-control shadow" placeholder="Ingrese la URL de la imagen" minlength="1" maxlength="200" required>
                 </div>
                 <div class="my-3">
-                    <label for="stock" class="form-label">Stock</label>
-                    <input id="stock" type="text" class="form-control"  minlength="1" maxlength="200" required>
+                    <label for="stock" class="form-label fs-5">Stock</label>
+                    <input id="stock" type="text" class="form-control shadow"  minlength="1" maxlength="200" required placeholder="Ingrese el stock">
                 </div>
-                <button class="btn btn-2 my-3" type="submit">Guardar</button>
+                <button class="btn my-3 btn-custom-add fw-bold" type="submit">Guardar</button>
             </form>
-
+            <button type="button" class="btn my-3 btn-custom-add fw-bold" onclick="LimpiarFormulario()">Nuevo</button>
         </div>
         
         
@@ -171,15 +176,16 @@
             <img src="../img/TECHCODE_Logo_-_Original_-_5000x5000.png" class="img-fluid" alt="Logo TechCode"  >
         </div>
     </div>
-    <button type="button" class="btn btn-2" onclick="LimpiarFormulario()">Nuevo</button>
+    
         </section>
         <hr>
         <section class="container-fluid my-3">
-            <h2 class="titleoff text-center">LISTADO DE PRODUCTOS</h2>
-            <article class="container mt-4">
-                <h3 class="container">EDITAR Y ELIMINAR PRODUCTOS</h3>
+            <h2 class=" text-center">LISTADO DE PRODUCTOS</h2>
+            <hr>
+            <article class="container-fluid mt-4">
+                <h3 class=" mb-4">EDITAR Y ELIMINAR PRODUCTOS</h3>
                 <div>
-                    <table class="table">
+                    <table class="table table-striped border border-1">
                         <thead>
                           <tr>
                             <th scope="col">Código</th>
@@ -216,11 +222,13 @@
             </article>
         </section>
         <section class="container-fluid my-3">
-            <h2 class="titleoff text-center">REGISTRO DE USUARIOS</h2>
-            <article class="container mt-4">
-                <h3>EDITAR Y ELIMINAR USUARIOS</h3>
+          <hr>
+            <h2 class="text-center">REGISTRO DE USUARIOS</h2>
+            <hr>
+            <article class="container-fluid mt-4">
+                <h3 class="mb-4">ELIMINAR USUARIOS</h3>
                 <div>
-                    <table class="table">
+                    <table class="table table-striped mb-5 border border-1">
                         <thead>
                           <tr>
                             <th scope="col">Nombre de Usuario</th>
@@ -274,6 +282,7 @@
     <script type="module" src="../js/admin.js"></script>
     <script type="module" src="../js/navdarFooter.js"></script>
     <script type="module" src="../js/appNF.js"></script>
+    <script type="module" src="../js/home.js"></script>
     
 </body>
 </html>

@@ -69,39 +69,4 @@ export function ValidarTodo(inputModelo,inputPantalla,inputMemoria,inputAlmacena
     }
 }
 
-export function CreaPrimerosProductos(){
-    let listaProductos = JSON.parse(localStorage.getItem("productos"));
-    if(listaProductos === null){
-        listaProductos = [];
-        const productoNuevo = {
-            codigo: CodigoAleatorio(),
-            marca: "Samsung",
-            modelo: "Galaxy A14",
-            pantalla: '6.6"',
-            memoria: "4 GB",
-            almacenamiento: "128 GB",
-            camara: "50MP",
-            descripcion: "Capturá cada momento de tu vida: Salí y tomá fotos de grandes paisajes con la cámara ultra gran angular y un espectro completo de colores con la cámara principal de 50 MP. Sacate selfies reales con la cámara frontal de 13 MP, o incluso capturá pequeños detalles con la cámara macro.",
-            precio: "239.759",
-            urlImg: "https://i.blogs.es/76ac7c/galaxy-a14-5g-03/1366_2000.jpg",
-            stock: "10",
-          };
-          const productoNuevo2 = {
-            codigo: CodigoAleatorio(),
-            marca: "Motorola",
-            modelo: "Edge 40 Pro",
-            pantalla: '6.52"',
-            memoria: "8 GB",
-            almacenamiento: "256 GB",
-            camara: "50MP",
-            descripcion: "Diseño elegante y protección contra el agua - Experimentá un teléfono cómodo para la mano, con terminaciones en cuero vegano y protegido contra el agua IP681.",
-            precio: "1.099.999",
-            urlImg: "https://http2.mlstatic.com/D_NQ_NP_838463-MLA72065393348_102023-O.webp",
-            stock: "5",
-          };
-          listaProductos.push(productoNuevo);
-          listaProductos.push(productoNuevo2);
-          localStorage.setItem("productos", JSON.stringify(listaProductos));
-    }
-}
 
