@@ -99,7 +99,7 @@ function GuardarProducto(e) {
   } else {
     Swal.fire({
       title: "Ups",
-      text: "Todos los campos son requeridos",
+      text: "Todos los campos son requeridos, verifique que todos los campos esten correctamente completados",
       icon: "error",
     });
   }
@@ -122,7 +122,7 @@ function CrearProducto() {
   arrayProductos.push(productoNuevo);
   Swal.fire({
     title: "Exito!",
-    text: "El producto se guardo correctamente",
+    text: "El producto se creo correctamente",
     icon: "success",
   });
 
@@ -226,7 +226,7 @@ function ListarUsuarios(){
     bodyTablaUsuarios.innerHTML +=`<tr>
     <th scope="row">${element.nombre}</th>
     <td>${element.email}</td>
-    <td>${element.password}</td>
+    <td>********</td>
     <td>${element.role}</td>
     <td>
         <button type="button" class="btn btn-danger mx-1" onclick="EliminarUsuario('${element.email}')">Eliminar</button>
