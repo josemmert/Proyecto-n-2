@@ -1,3 +1,9 @@
+
+main {
+    margin-top: 80px;
+   
+}
+
 .navFoot-color{
     background-color: #c1d1fc;
     }
@@ -63,15 +69,6 @@
   cursor: pointer !important;
 }
 
-.box-titles {
-  background-color: #1D215E;
-  color: #fff;
-  margin: 20px;
-  padding: 20px;
-  size: 20px;
-  text-align: center;
-}
-
 
 .box-titles{
     background-color: #001550;
@@ -80,9 +77,9 @@
     text-align: center;
 }
 .box-form {
-  background-color: #254e95;
-  margin: 20px;
-  padding: 20px;
+  background-color: #001550;
+  margin: 10px;
+  padding: 5px;
   border-radius: 10px;
 }
 
@@ -108,7 +105,10 @@ footer li{
     text-transform: uppercase;
 }
 
-
+.img-aboutUs-open{
+    width:100px;
+    border-radius: 20px;
+}
 
 @media(max-width:563px){
     .img-footer{
@@ -126,13 +126,13 @@ footer li{
     
 }
 
-@media(min-width:1120px){
+    
     .img-aboutUs{
         width: 250px;
         border-radius: 20px;
-    }}
+    }
 
- @media(max-width:1120px){
+    @media(max-width:1120px){
         .img-aboutUs{
             width: 230px;
             border-radius: 20px;
@@ -168,4 +168,7 @@ footer li{
         }
     }
 
- 
+    .img-git{
+        width: 40px;
+        height: 40px;
+    }
