@@ -78,7 +78,7 @@ document.addEventListener('keyup', e => {
      arrayProductos.forEach((product) => {
          bodyrow.innerHTML += `<div class="galeria col-sm-12 col-md-4 col-lg-3 my-3 d-flex justify-content-center">
          <a href="/pages/pag-detail.html?codigo=${product.codigo}">
-         <div class="producto card-text articulos">
+         <div class="producto card-text articulos tamaño-card">
              <img src="${product.urlImg}" alt="${product.modelo}">
              <div class="cardsm">
               <h3 class="">${product.modelo}</h3>
