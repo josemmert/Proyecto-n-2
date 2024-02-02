@@ -229,7 +229,7 @@ function ListarUsuarios(){
     <td>********</td>
     <td>${element.role}</td>
     <td>
-        <button type="button" class="btn btn-danger mx-1" onclick="EliminarUsuario('${element.email}')">Eliminar</button>
+        <button type="button" class="btn btn-danger mx-1" onclick="EliminarUsuario('${element.email}','${element.role}')">Eliminar</button>
     </td>
   </tr>`;
   });
@@ -292,29 +292,39 @@ window.EliminarProducto=function(codigo){
   }
 
 
-  window.EliminarUsuario=function(email){
-    Swal.fire({
-      title: "¿Estas seguro?",
-      text: "Los cambios no se podran revertir",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Eliminar",
-      cancelButtonText:"Cancelar"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        const nuevoArrayUsuarios = arrayUsuarios.filter((element)=>element.email !== email);
-        arrayUsuarios = nuevoArrayUsuarios;
-        localStorage.setItem("Users", JSON.stringify(arrayUsuarios));
-        ListarUsuarios();
+  window.EliminarUsuario=function(email, rol){
+    if (rol !== "administrador") {
       Swal.fire({
-          title: "Exito!",
-          text: "El usuario se Elimino correctamente",
-          icon: "success",
-        });
-      }
-    });
+        title: "¿Estas seguro?",
+        text: "Los cambios no se podran revertir",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar",
+        cancelButtonText:"Cancelar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const nuevoArrayUsuarios = arrayUsuarios.filter((element)=>element.email !== email);
+          arrayUsuarios = nuevoArrayUsuarios;
+          localStorage.setItem("Users", JSON.stringify(arrayUsuarios));
+          ListarUsuarios();
+        Swal.fire({
+            title: "Exito!",
+            text: "El usuario se Elimino correctamente",
+            icon: "success",
+          });
+        }
+      });
+    }else{
+      Swal.fire({
+        title: "ERROR",
+        text: "No se puede aliminar un usuario administrador",
+        icon: "error"
+      });
+    }
+
+    
     
   }
 
