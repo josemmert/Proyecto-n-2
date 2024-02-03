@@ -1,8 +1,23 @@
 
 main {
     margin-top: 80px;
-   
+    font-family: 'Open Sans', sans-serif;
 }
+
+
+@media (max-width: 565px) {
+    main {
+      margin-top: 70px;
+    }
+    
+}
+
+@media (max-width: 280px) {
+    main {
+      margin-top: 50px;
+    }
+    
+  }
 
 .navFoot-color{
     background-color: #c1d1fc;

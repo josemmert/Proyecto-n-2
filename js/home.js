@@ -83,7 +83,7 @@ document.addEventListener('keyup', e => {
                     <div class="producto card-text articulos tamaño-card">
                         <img src="${product.urlImg}" alt="${product.modelo}">
                         <div class="cardsm">
-                            <h3 class="">${product.modelo}</h3>
+                            <h3>${product.modelo}</h3>
                             <a href="/pages/pag-detail.html?codigo=${product.codigo}" class="btn btn-primary mt-4 d-flex justify-content-center boton-detalle">Ver más detalles</a>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ document.addEventListener('keyup', e => {
          <div class="producto card-text articulos tamaño-card">
              <img src="${product.urlImg}" alt="${product.modelo}">
              <div class="cardsm">
-              <h3 class="">${product.modelo}</h3>
+              <h3>${product.modelo}</h3>
               <a href="/pages/pag-detail.html?codigo=${product.codigo}" class="btn btn-primary mt-4 d-flex justify-content-center boton-detalle">Ver más   detalles</a>
              </div>
          </div>

@@ -13,79 +13,43 @@
     --color-cremita: #fff8ed;
 }
 
-
-main{
-    margin-top: 40px;
-    font-family: 'Open Sans', sans-serif;
-}
-
 header, footer{
     font-family: 'Staatliches', sans-serif;
     
 }
 
-/* .imgcarrusel{
-    height: 600px;
-    width: 800px;
-    object-fit: fill;
-} */
-
-/* @media (max-width: 345px) {
-    .imgcarrusel {
-      height: 160px;
-      width: 300px;
-      object-fit: cover;
-    }
+.imgcarrusel{
+    height: 550px;
 }
-  
-@media (max-width: 1060px) {
-  
+
+@media (max-width: 865px) {
   .imgcarrusel {
-    height: 500px;
-    width: 800px;
-    object-fit: cover ;
+    height: 260px;
+  }
+  
+
+}
+@media (max-width: 350px) {
+  .imgcarrusel {
+    height: 150px;
   }
   
 }
-@media (max-width: 898px) {
-  
-  .imgcarrusel {
-    height: 400px;
-    width: 600px;
-    object-fit: cover ;
-  }
-  
-}
-@media (max-width: 738px) {
-  
-  .imgcarrusel {
-    height: 350px;
-    width:  300px;
-    object-fit: fill ;
-  }
-  
-}
-@media (max-width: 630px) {
-  
-  .imgcarrusel {
-    height: 250px;
-    width:  280px;
-    object-fit: cover ;
-  }
-  
-} */
-
-
-
 
 .titleoff{
     display: flex;
     justify-content: center;
-    padding-left: 0;
-    background-color: var(--color-naranja);
+    width: 300px;
+    border-bottom: 3px solid var(--color-naranja);
+    border-top: 3px solid var(--color-celeste);
+    background: linear-gradient(to bottom, #c1d1fc, #FD972B); /* Tu gradiente de color */
+    -webkit-background-clip: text; /* Propiedad específica de WebKit para aplicar el fondo al texto */
+    background-clip: text;
+    color: transparent; /* Hace que el texto sea transparente */
     border-radius: 15px;
-    border: 1px solid #092361;
-    color: #ffffff;
+    font-size: xx-large;
+    font-weight: bold;
+    
 }
 
 
@@ -155,23 +119,17 @@ header, footer{
 
 .btn-1:hover{
     background-color: var(--color-cremita);
-    color: black;
+    color: var(--color-azul);
+    border: 1px solid var(--color-azul);
 }
 
 .sales {
     margin: 25px 0;
     height: 350px;
-    width: 100%;
+    border-radius: 15px;
 }
 
-
-@media (max-width: 750px) {
-    .sales {
-      height: 250px;
-      width: 100%;
-    }
-}
-@media (max-width: 1280px) {
+@media (max-width: 1120px) {
     .sales {
       display: none;
     }
@@ -231,6 +189,9 @@ header, footer{
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .producto:hover {
@@ -269,6 +230,7 @@ header, footer{
 .boton-detalle:hover {
     background-color: var(--color-cremita);
     color: black;
+    border: solid 1.5px var(--color-naranja) ;
 }
 
 .btn-custom-add{
@@ -280,4 +242,5 @@ header, footer{
     background-color: var(--color-azul);
     color: var(--color-naranja);
 }
+
 
