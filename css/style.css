@@ -201,9 +201,9 @@ header, footer{
     max-width: 400px;
     margin: 0 auto;
 }
+
 #cart {
   background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
@@ -271,6 +271,18 @@ header, footer{
     color: black;
 }
 
+
+.title-brand, 
+.icon-product,
+.number-product{
+    color: var(--color-naranja);
+}
+
+.text-product,
+.title-product{
+    color: var(--color-azul);
+}
+
 .btn-custom-add{
     background-color: var(--color-naranja);
     color: var(--color-azul);
@@ -280,6 +292,7 @@ header, footer{
     background-color: var(--color-azul);
     color: var(--color-naranja);
 }
+
 
 .contenedor-tabla {
     overflow-x: auto;
@@ -299,3 +312,19 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+
+.container-card{
+    height: 75vh;
+}
+
+.btn-pay{
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+}
+
+.btn-pay:hover{
+    background-color: var(--color-azul);
+    color: var(--color-naranja);
+}
+
+
