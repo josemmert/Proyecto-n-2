@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Añadir un evento de clic al botón "Pagar"
   payButton.addEventListener("click", function () {
-      // Llamar a la función pay para simular el pago
-      pay();
+    // Llamar a la función pay para simular el pago
+    pay();
   });
 });
 
@@ -25,20 +25,21 @@ function displayCart() {
   if (cartProducts.length === 0) {
       // Mostrar mensaje de carrito vacío
       cartContainer.innerHTML = "<h3>No hay productos en el carrito. ¡Seguí comprando!</h3>";
+      // Ajustar la altura mínima del carrito para evitar cambios en la página
+      cartContainer.style.minHeight = "200px"; // Puedes ajustar el valor según tus necesidades
   } else {
       // Mostrar los productos en el carrito
-      cartProducts.forEach(function (product) {
+      cartProducts.forEach(function (product, index) {
           let cartItem = document.createElement("div");
           cartItem.classList.add("col-md-4");
 
           cartItem.innerHTML = `
               <div class="card">
-                  <img src="${product.urlImg}" class="card-img-top" alt="${product.modelo}">
+                  <img src="${product.urlImg}" class="card-img-top" alt="${product.modelo}" style="width: 200px; height: 200px; object-fit: cover;">
                   <div class="card-body">
                       <h5 class="card-title">${product.modelo}</h5>
-                      <p class="card-text">${product.descripcion}</p>
                       <p class="card-price">Precio: $${product.precio}</p>
-                      <button class="btn btn-danger btn-remove" data-product-id="${product.codigo}">Eliminar</button>
+                      <button class="btn btn-danger btn-remove" data-product-id="${index}">Eliminar</button>
                   </div>
               </div>
           `;
@@ -46,7 +47,7 @@ function displayCart() {
           // Añadir evento de clic para el botón de eliminación
           let removeButton = cartItem.querySelector(".btn-remove");
           removeButton.addEventListener("click", function () {
-              removeFromCart(product.codigo);
+              removeFromCart(index);
           });
 
           cartContainer.appendChild(cartItem);
@@ -58,12 +59,12 @@ function displayCart() {
 }
 
 // Función para eliminar un producto del carrito
-function removeFromCart(productCode) {
+function removeFromCart(index) {
   // Obtener los productos del carrito almacenados en localStorage
   let cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // Filtrar el producto a eliminar
-  cartProducts = cartProducts.filter((product) => product.codigo !== productCode);
+  // Eliminar el producto según el índice
+  cartProducts.splice(index, 1);
 
   // Guardar los productos actualizados en localStorage
   localStorage.setItem("cart", JSON.stringify(cartProducts));
@@ -74,7 +75,10 @@ function removeFromCart(productCode) {
 
 // Función para actualizar el total del carrito
 function updateCartTotal(cartProducts) {
-  let total = cartProducts.reduce((acc, product) => acc + parseFloat(product.precio), 0);
+  let total = cartProducts.reduce(
+    (acc, product) => acc + parseFloat(product.precio),
+    0
+  );
   document.getElementById("cart-total").textContent = total.toFixed(2);
 }
 
