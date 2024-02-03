@@ -1,3 +1,5 @@
+import { getRoleUserLog } from "./hellpersNF.js";
+
 let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
 let detailbody = document.getElementById("main-detail");
 
@@ -88,7 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Añadir un evento de clic al botón
         addToCartButton.addEventListener("click", function () {
-            addToCart(product);
+            const rol = getRoleUserLog();
+            if(rol === 'invitado' && product.stock >=1){
+                addToCart(product);
+            }else if(product.stock === 0){
+                alert("Stock")
+            }else{
+                alert("ingresa como cliente")
+            }
         });
     } else {
         console.error("Producto no encontrado");
