@@ -93,10 +93,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const rol = getRoleUserLog();
             if(rol === 'invitado' && product.stock >=1){
                 addToCart(product);
-            }else if(product.stock === 0){
-                alert("Stock")
+            }else if(product.stock == 0){
+                Swal.fire({
+                    position: "top-center",
+                    color: "#212121",
+                    icon: "error",
+                    title: `No hay stock`,
+                    showConfirmButton: false,
+                    timer: 1500,
+            });
             }else{
-                alert("ingresa como cliente")
+                Swal.fire({
+                    position: "top-center",
+                    color: "#212121",
+                    icon: "error",
+                    title: `Inicie sesion para comprar`,
+                    showConfirmButton: false,
+                    timer: 1500,
+            });
             }
         });
     } else {
