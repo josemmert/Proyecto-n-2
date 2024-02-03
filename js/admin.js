@@ -1,6 +1,5 @@
 import {
   CodigoAleatorio,
-  CreaPrimerosProductos,
   ValidarInputDescripcion,
   ValidarInputPrecio,
   ValidarInputStock,
@@ -13,7 +12,6 @@ import {
 
 let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
 let arrayUsuarios =JSON.parse(localStorage.getItem("Users")) || [];
-console.log(arrayUsuarios);
 let bodyTablaProductos = document.getElementById("tbodyProductos");
 let bodyTablaUsuarios = document.getElementById("tbodyUsuarios");
 let inputCodigo = document.getElementById("codigo");
@@ -69,7 +67,6 @@ inputStock.addEventListener("blur", () => {
 });
 //FIN VALIDACIONES
 
-CreaPrimerosProductos();
 
 
 ListarProductos();
@@ -102,7 +99,7 @@ function GuardarProducto(e) {
   } else {
     Swal.fire({
       title: "Ups",
-      text: "Todos los campos son requeridos",
+      text: "Todos los campos son requeridos, verifique que todos los campos esten correctamente completados",
       icon: "error",
     });
   }
@@ -125,7 +122,7 @@ function CrearProducto() {
   arrayProductos.push(productoNuevo);
   Swal.fire({
     title: "Exito!",
-    text: "El producto se guardo correctamente",
+    text: "El producto se creo correctamente",
     icon: "success",
   });
 
@@ -229,10 +226,10 @@ function ListarUsuarios(){
     bodyTablaUsuarios.innerHTML +=`<tr>
     <th scope="row">${element.nombre}</th>
     <td>${element.email}</td>
-    <td>${element.password}</td>
+    <td>********</td>
     <td>${element.role}</td>
     <td>
-        <button type="button" class="btn btn-danger mx-1" onclick="EliminarUsuario('${element.email}')">Eliminar</button>
+        <button type="button" class="btn btn-danger mx-1" onclick="EliminarUsuario('${element.email}','${element.role}')">Eliminar</button>
     </td>
   </tr>`;
   });
@@ -242,6 +239,15 @@ window.CargarEdicion = function (codigo){
     const productoAEditar = arrayProductos.find((element) => {
         return element.codigo === codigo;
     });
+    inputModelo.className = "form-control";
+  inputPantalla.className = "form-control";
+  inputMemoria.className = "form-control";
+  inputAlmacenamiento.className = "form-control";
+  inputCamara.className="form-control";
+  inputDescripcion.className = "form-control";
+  inputPrecio.className = "form-control";
+  inputUrlImg.className = "form-control";
+  inputStock.className = "form-control";
 
     if(productoAEditar !== undefined){
         inputCodigo.value = productoAEditar.codigo;
@@ -286,29 +292,39 @@ window.EliminarProducto=function(codigo){
   }
 
 
-  window.EliminarUsuario=function(email){
-    Swal.fire({
-      title: "¿Estas seguro?",
-      text: "Los cambios no se podran revertir",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Eliminar",
-      cancelButtonText:"Cancelar"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        const nuevoArrayUsuarios = arrayUsuarios.filter((element)=>element.email !== email);
-        arrayUsuarios = nuevoArrayUsuarios;
-        localStorage.setItem("Users", JSON.stringify(arrayUsuarios));
-        ListarUsuarios();
+  window.EliminarUsuario=function(email, rol){
+    if (rol !== "administrador") {
       Swal.fire({
-          title: "Exito!",
-          text: "El usuario se Elimino correctamente",
-          icon: "success",
-        });
-      }
-    });
+        title: "¿Estas seguro?",
+        text: "Los cambios no se podran revertir",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Eliminar",
+        cancelButtonText:"Cancelar"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const nuevoArrayUsuarios = arrayUsuarios.filter((element)=>element.email !== email);
+          arrayUsuarios = nuevoArrayUsuarios;
+          localStorage.setItem("Users", JSON.stringify(arrayUsuarios));
+          ListarUsuarios();
+        Swal.fire({
+            title: "Exito!",
+            text: "El usuario se Elimino correctamente",
+            icon: "success",
+          });
+        }
+      });
+    }else{
+      Swal.fire({
+        title: "ERROR",
+        text: "No se puede aliminar un usuario administrador",
+        icon: "error"
+      });
+    }
+
+    
     
   }
 
@@ -332,5 +348,7 @@ window.EliminarProducto=function(codigo){
   }
 
   CheckAdmin();
+
+
 
 

@@ -1,201 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content=">Grupo6 80i" />
-    <meta name="description" content="Proyecto JavaScript" />
-    <meta name="keywords" content="html, css3, bootstrap, pages, javascript, etc" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/customer.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>Administracion</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content=">Grupo6 80i" />
+  <meta name="description" content="Proyecto JavaScript" />
+  <meta name="keywords" content="html, css3, bootstrap, pages, javascript, etc" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/customer.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/favicon.ico.png" type="image/x-icon" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Administracion</title>
 </head>
+
 <body>
-    <header class="fs-5">
-        <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-              <img src="../img/log.jpg" alt="Techcode" width="70" height="70" />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon text-bg-light"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
-              id="navbarNav"
-            >
-              <div
-                class="collapse navbar-collapse d-lg-flex justify-content-lg-between"
-                id="navbarNav"
-              >
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="../index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Acerca de Nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Contactos</a>
-                  </li>
-                </ul>
-              </div>
-              <ul class="navbar-nav d-flex justify-content-center">
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-light d-none"
-                    id="li-ad"
-                    href="./admin.html"
-                    >Administración
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-light d-none"
-                    id="li-cl"
-                    href="cart.html"
-                    data-toggle="modal"
-                    data-target="#cartModal"
-                    >Carrito</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="d-none nav-link text-light"
-                    id="IsRegister"
-                    href="./login-register.html"
-                    >Registrarse</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link text-light"
-                    id="IsButton"
-                    href="./pages/login-register.html?action=login"
-                    >Iniciar sesión</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <button
-                    class="nav-link text-light"
-                    id="CsButton"
-                    onclick="logOut(), CheckAdmin()"
-                  >
-                    Cerrar sesión
-                  </button>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-    <main class="container-fluid bg-light">
-        <section class="my-5 text-center titleoff">
-            <h2 id="titulo">ADMINISTRACION DE PRODUCTOS</h2>
-            <hr>
-        </section>
-        <div class="container">
+  <header class="fs-5">
+    <nav class="navbar fixed-top navFoot-color navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">
+
+          <img src="../img/TECHCODE-Logo.png" class="img-log" alt="Techcode" width="200" class="py-2" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-lg-between" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link custom-text" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-text" href="../pages/aboutUs.html">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-text" href="../pages/contacto.html">Contactos</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav d-flex justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link custom-text d-none" id="li-ad" href="../pages/admin.html">Administración</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-text d-none" id="li-cl" href="pages/cart.html" data-toggle="modal"
+                data-target="#cartModal">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-text" id="IsRegister"
+                href="./pages/login-register.html?action=register">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-text" id="IsButton" href="./pages/login-register.html?action=login">Iniciar
+                sesión</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link custom-text d-none" id="CsButton" onclick="logOut()">
+                Cerrar sesión
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container-fluid mt-5">
+    <section class=" text-center pt-5">
+      <h2 id="titulo">ADMINISTRACION DE PRODUCTOS Y USUARIOS</h2>
+      <hr>
+    </section>
+    <!-- <div class="container">
             <h3>CARGAR NUEVO PRODUCTO</h3>
-        </div>
-        <section class="container">
+        </div> -->
+    <section class="container">
 
-        <div class="row">
-            <div class="col">
-            <form>
-                <div class="my-3">
-                    <label for="codigo" class="form-label">Codigo</label>
-                    <input id="codigo" type="text" class="form-control" minlength="1" maxlength="100" required disabled>
-                </div>
-                <div class="my-3">
-                    <label for="marca" class="form-label">Marca</label>
-                    <select id="marca" class="form-select">
-                    <option selected>Motorola</option>
-                    <option>Samsung</option>
-                    <option>Iphone</option>
-                    <option>Otro</option>
-                    </select>
-                </div>
-                <div class="my-3">
-                    <label for="modelo" class="form-label">Modelo</label>
-                    <input id="modelo" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese el modelo" required>
-                </div>
-                <div class="my-3">
-                    <label for="pantalla" class="form-label">Pantalla</label>
-                    <input id="pantalla" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese el tamaño de la pantalla del dispositivo" required>
-                </div>
-                <div class="my-3">
-                    <label for="memoria" class="form-label">Memoria</label>
-                    <input id="memoria" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese la memoria RAM del dispositivo" required>
-                </div>
-                <div class="my-3">
-                    <label for="almacenamiento" class="form-label">Almacenamiento</label>
-                    <input id="almacenamiento" type="text" class="form-control" minlength="1" maxlength="60" placeholder="Ingrese la capacidad de almacenamiento del dispositivo" required>
-                </div>
-                <div class="my-3">
-                    <label for="camara" class="form-label">Camara</label>
-                    <input id="camara" type="text" class="form-control" minlength="1" maxlength="30" placeholder="Ingrese la capacidad de la camara" required>
-                </div>
-                <div class="my-3">
-                    <label for="descripcion" class="form-label">Descripcion</label>
-                    <textarea id="descripcion" type="text" class="form-control" placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="2000" required rows="3"></textarea>
-                </div>
-                <div class="my-3">
-                    <label for="precio" class="form-label">Precio</label>
-                    <input id="precio" type="text" class="form-control" placeholder="Ingrese el precio del producto" minlength="1" maxlength="50" required>
-                </div>
-                <div class="my-3">
-                    <label for="imagen" class="form-label">URL Imagen del producto</label>
-                    <input id="imagen" type="text" class="form-control" placeholder="Ingrese la URL de la imagen" minlength="1" maxlength="200" required>
-                </div>
-                <div class="my-3">
-                    <label for="stock" class="form-label">Stock</label>
-                    <input id="stock" type="text" class="form-control"  minlength="1" maxlength="200" required>
-                </div>
-                <button class="btn btn-2 my-3" type="submit">Guardar</button>
-            </form>
+      <div class="row">
+        <div class="col g-5 border border-1 shadow rounded-5">
+          <div class="container mt-3 text-center">
+            <h3>CARGAR NUEVO PRODUCTO</h3>
+          </div>
+          <form>
+            <div class="my-3">
+              <label for="codigo" class="form-label fs-5 my-3">Código</label>
+              <input id="codigo" type="text" class="form-control shadow" minlength="1" maxlength="100" required
+                disabled>
+            </div>
+            <div class="my-3">
+              <label for="marca" class="form-label fs-5">Marca</label>
+              <select id="marca" class="form-select shadow" required>
+                <option value="">Seleccione la marca</option>
+                <option>Motorola</option>
+                <option>Samsung</option>
+                <option>Iphone</option>
+                <option>Xiaomi</option>
+              </select>
+            </div>
+            <div class="my-4">
+              <label for="modelo" class="form-label fs-5">Modelo</label>
+              <input id="modelo" type="text" class="form-control shadow" minlength="1" maxlength="60"
+                placeholder="Ingrese el modelo del dispositivo" required>
+            </div>
+            <div class="my-3">
+              <label for="pantalla" class="form-label fs-5">Pantalla</label>
+              <input id="pantalla" type="text" class="form-control shadow" minlength="1" maxlength="60"
+                placeholder="Ingrese el tamaño de la pantalla del dispositivo" required>
+            </div>
+            <div class="my-3">
+              <label for="memoria" class="form-label fs-5">Memoria</label>
+              <input id="memoria" type="text" class="form-control shadow" minlength="1" maxlength="60"
+                placeholder="Ingrese la capacidad de memoria RAM del dispositivo" required>
+            </div>
+            <div class="my-3">
+              <label for="almacenamiento" class="form-label fs-5">Almacenamiento</label>
+              <input id="almacenamiento" type="text" class="form-control shadow" minlength="1" maxlength="60"
+                placeholder="Ingrese la capacidad de almacenamiento interno del dispositivo" required>
+            </div>
+            <div class="my-3">
+              <label for="camara" class="form-label fs-5">Camara</label>
+              <input id="camara" type="text" class="form-control shadow" minlength="1" maxlength="30"
+                placeholder="Ingrese la capacidad de la camara" required>
+            </div>
+            <div class="my-3">
+              <label for="descripcion" class="form-label fs-5">Descripcion</label>
+              <textarea id="descripcion" type="text" class="form-control shadow"
+                placeholder="Ingrese la descripcion del producto" minlength="10" maxlength="2000" required
+                rows="3"></textarea>
+            </div>
+            <div class="my-3">
+              <label for="precio" class="form-label fs-5">Precio</label>
+              <input id="precio" type="text" class="form-control shadow" placeholder="Ingrese el precio del producto"
+                minlength="1" maxlength="50" required>
+            </div>
+            <div class="my-3">
+              <label for="imagen" class="form-label fs-5">URL Imagen del producto</label>
+              <input id="imagen" type="text" class="form-control shadow" placeholder="Ingrese la URL de la imagen"
+                minlength="1" maxlength="200" required>
+            </div>
+            <div class="my-3">
+              <label for="stock" class="form-label fs-5">Stock</label>
+              <input id="stock" type="text" class="form-control shadow" minlength="1" maxlength="200" required
+                placeholder="Ingrese el stock">
+            </div>
+            <button class="btn my-3 btn-custom-add fw-bold" type="submit">Guardar</button>
+            <button type="button" class="btn m-3 btn-custom-add fw-bold" onclick="LimpiarFormulario()">Limpiar</button>
+          </form>
 
         </div>
-        
-        
+
+
         <div class="col d-flex align-items-center justify-content-center d-none d-lg-flex">
-            <img src="../img/Logo-TechCode-oscuro.png" class="img-fluid" alt="Logo TechCode"  >
+          <img src="../img/TECHCODE_Logo_-_Original_-_5000x5000.png" class="img-fluid" alt="Logo TechCode">
         </div>
-    </div>
-    <button type="button" class="btn btn-2" onclick="LimpiarFormulario()">Nuevo</button>
-        </section>
-        <hr>
-        <section class="container-fluid my-3">
-            <h2 class="titleoff text-center">LISTADO DE PRODUCTOS</h2>
-            <article class="container mt-4">
-                <h3 class="container">EDITAR Y ELIMINAR PRODUCTOS</h3>
-                <div>
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Código</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Modelo</th>
-                            <th scope="col">Pantalla</th>
-                            <th scope="col">Memoria</th>
-                            <th scope="col">Almacenamiento</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Imagen</th>
-                            <th scope="col">Stock</th>
-                            <th scope="col">Acciones</th>
-                          </tr>
-                        </thead>
-                        <tbody id="tbodyProductos">
-                          <!-- <tr>
+      </div>
+
+    </section>
+    <hr>
+    <section class="container-fluid my-3">
+      <h2 class=" text-center">LISTADO DE PRODUCTOS</h2>
+      <hr>
+      <article class="container-fluid mt-4">
+        <h3 class=" mb-4">EDITAR Y ELIMINAR PRODUCTOS</h3>
+        <div>
+          <table class="table table-striped border border-1">
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Pantalla</th>
+                <th scope="col">Memoria</th>
+                <th scope="col">Almacenamiento</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyProductos">
+              <!-- <tr>
                             <th scope="row">1</th>
                             <td>Motorola</td>
                             <td>Edge 40 Pro</td>
@@ -210,28 +194,30 @@
                                 <button type="button" class="btn btn-danger mx-1">Eliminar</button>
                             </td>
                           </tr> -->
-                        </tbody>
-                      </table>
-                </div>
-            </article>
-        </section>
-        <section class="container-fluid my-3">
-            <h2 class="titleoff text-center">REGISTRO DE USUARIOS</h2>
-            <article class="container mt-4">
-                <h3>EDITAR Y ELIMINAR USUARIOS</h3>
-                <div>
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">Nombre de Usuario</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Password</th>
-                            <th scope="col">Rol</th>
-                            <th scope="col">Acciones</th>
-                          </tr>
-                        </thead>
-                        <tbody id="tbodyUsuarios">
-                          <!-- <tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+    <section class="container-fluid my-3">
+      <hr>
+      <h2 class="text-center">REGISTRO DE USUARIOS</h2>
+      <hr>
+      <article class="container-fluid mt-4">
+        <h3 class="mb-4">ELIMINAR USUARIOS</h3>
+        <div>
+          <table class="table table-striped mb-5 border border-1">
+            <thead>
+              <tr>
+                <th scope="col">Nombre de Usuario</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyUsuarios">
+              <!-- <tr>
                             <th scope="row">anonimo</th>
                             <td>anonimo@gmail.com</td>
                             <td>123456789</td>
@@ -240,45 +226,37 @@
                                 <button type="button" class="btn btn-danger mx-1">Eliminar</button>
                             </td>
                           </tr> -->
-                        </tbody>
-                      </table>
-                </div>
-            </article>
-        </section>
-    </main>
-    <footer class="navFoot-color d-lg-flex justify-content-around fs-5">
-        <div class="text-center border border-secondary border-1">
-          <img class="img-footer" src="../img/log.jpg" />
-          <p class="text-center">&copy Techcode 2023</p>
+            </tbody>
+          </table>
         </div>
-  
-        <li class="text-center nav-item">
-          <a class="nav-link text-white text-md-center" href="../pages/error.html"
-            >Acerca de Nosotros</a
-          >
-        </li>
-        <li class="text-center nav-item">
-          <a class="nav-link text-white" href="../pages/error.html">Contactos</a>
-        </li>
-  
-        <div class="text-center my-3 p-2">
-          <a href="https://www.facebook.com" target="_blank"
-            ><img class="img-footer p-2" src="../img/facebook.png"
-          /></a>
-          <a href="https://www.whatsapp.com" target="_blank"
-            ><img class="img-footer p-2" src="../img/whatsapp.png"
-          /></a>
-          <a href="https://www.instagram.com" target="_blank"
-            ><img class="img-footer p-2" src="../img/instagram.png"
-          /></a>
-        </div>
-      </footer>
-    
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="../js/admin.js"></script>
-    <script type="module" src="../js/navdarFooter.js"></script>
-    <script type="module" src="../js/appNF.js"></script>
-    
+      </article>
+    </section>
+  </main>
+  <footer class="navFoot-color d-lg-flex justify-content-around fs-5">
+    <div class="text-center">
+      <img src="../img/TECHCODE-Logo.png" class="img-log" alt="logoTechCode">
+      <p class="text-center">&copy Techcode 2023</p>
+    </div>
+    <div class="m-2 m-lg-5">
+      <a class="nav-link custom-text-ft text-center" href="../pages/aboutUs.html">Acerca de Nosotros</a>
+      <a class="nav-link custom-text-ft text-center" href="../pages/contacto.html">Contactos</a>
+    </div>
+    <div class="text-center mt-3 p-2">
+      <a href="https://www.facebook.com" target="_blank"><img class="img-footer p-2" src="../img/facebook.png"
+          alt="logoFacebook" /></a>
+      <a href="https://www.whatsapp.com" target="_blank"><img class="img-footer p-2" src="../img/whatsapp.png"
+          alt="logoWhatsapp" /></a>
+      <a href="https://www.instagram.com" target="_blank"><img class="img-footer p-2" src="../img/instagram.png"
+          alt="logoInstagram" /></a>
+    </div>
+  </footer>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="../js/admin.js"></script>
+  <script type="module" src="../js/navdarFooter.js"></script>
+  <script type="module" src="../js/appNF.js"></script>
+  <script type="module" src="../js/home.js"></script>
+
 </body>
+
 </html>
