@@ -51,7 +51,7 @@ let swiper = new Swiper(".mySwiper",{
     slidesPerView: "auto",
     loop: true,
     coverflowEffect: {
-        depth:100,
+        depth:50,
         modifer:1,
         slidesShadows:true,
         rotate:0,
@@ -59,16 +59,52 @@ let swiper = new Swiper(".mySwiper",{
     }
 })
 
-document.addEventListener('keyup', e => {
-    if (e.target.matches('#buscador')){
 
-        document.querySelectorAll('.articulos').forEach(element=>{
-            element.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
-                ?element.classList.remove("filtro")
-                :element.classList.add("filtro")
-        })
+document.addEventListener('keyup', e => {
+    if (e.target.matches('#buscador')) {
+        const filtro = e.target.value.toLowerCase();
+
+        // Crear una copia del array original
+        let arrayProductosFiltrados = arrayProductos.slice();
+
+        // Filtrar la copia del array
+        arrayProductosFiltrados = arrayProductosFiltrados.filter(product =>
+            product.modelo.toLowerCase().includes(filtro) ||
+            product.marca.toLowerCase().includes(filtro)
+        );
+
+        // Eliminar todos los elementos del DOM
+        bodyrow.innerHTML = "";
+
+        // Agregar solo los elementos filtrados al DOM
+        arrayProductosFiltrados.forEach((product) => {
+            bodyrow.innerHTML += `<div class="galeria col-sm-12 col-md-4 col-lg-3 my-3 d-flex justify-content-center">
+                <a href="/pages/pag-detail.html?codigo=${product.codigo}">
+                    <div class="producto card-text articulos tamaño-card">
+                        <img src="${product.urlImg}" alt="${product.modelo}">
+                        <div class="cardsm">
+                            <h3 class="">${product.modelo}</h3>
+                            <a href="/pages/pag-detail.html?codigo=${product.codigo}" class="btn btn-primary mt-4 d-flex justify-content-center boton-detalle">Ver más detalles</a>
+                        </div>
+                    </div>
+                </a>
+            </div>`;
+        });
     }
-})
+});
+
+
+
+// document.addEventListener('keyup', e => {
+//     if (e.target.matches('#buscador')){
+
+//         document.querySelectorAll('.articulos').forEach(element=>{
+//             element.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+//                 ?element.classList.remove("filtro")
+//                 :element.classList.add("filtro")
+//         })
+//     }
+// })
 
  let arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
  let bodyrow = document.getElementById("row-home");
