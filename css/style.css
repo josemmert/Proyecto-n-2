@@ -293,6 +293,26 @@ header, footer{
     color: var(--color-naranja);
 }
 
+
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+} 
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
 .container-card{
     height: 75vh;
 }
@@ -306,4 +326,5 @@ header, footer{
     background-color: var(--color-azul);
     color: var(--color-naranja);
 }
+
 

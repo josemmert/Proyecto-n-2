@@ -211,8 +211,8 @@ function ListarProductos() {
         <td>${element.stock}</td>
         <td>
         <div class="d-flex">
-        <a href="#titulo" class="btn btn-warning mx-1" onclick="CargarEdicion('${element.codigo}')">Editar</a>
-        <button type="button" class="btn btn-danger mx-1" onclick="EliminarProducto('${element.codigo}')">Eliminar</button>
+        <a href="#titulo" class="mx-2" onclick="CargarEdicion('${element.codigo}')"><img src="../img/admin/editar.png" alt="Editar" width="30"></a>
+        <a href="#titulo" class="mx-2" onclick="EliminarProducto('${element.codigo}')"><img src="../img/admin/eliminar.png" alt="Eliminar" width="30"></a>
         </div>
         </td>
         
@@ -229,7 +229,7 @@ function ListarUsuarios(){
     <td>********</td>
     <td>${element.role}</td>
     <td>
-        <button type="button" class="btn btn-danger mx-1" onclick="EliminarUsuario('${element.email}','${element.role}')">Eliminar</button>
+    <a href="#titulo" class="mx-2" onclick="EliminarUsuario('${element.email}','${element.role}')"><img src="../img/admin/eliminar.png" alt="Eliminar" width="30"></a>
     </td>
   </tr>`;
   });
