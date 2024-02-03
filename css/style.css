@@ -159,9 +159,9 @@ header, footer{
     max-width: 400px;
     margin: 0 auto;
 }
+
 #cart {
   background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
@@ -233,12 +233,57 @@ header, footer{
     border: solid 1.5px var(--color-naranja) ;
 }
 
+
+.title-brand, 
+.icon-product,
+.number-product{
+    color: var(--color-naranja);
+}
+
+.text-product,
+.title-product{
+    color: var(--color-azul);
+}
+
 .btn-custom-add{
     background-color: var(--color-naranja);
     color: var(--color-azul);
 }
 
 .btn-custom-add:hover{
+    background-color: var(--color-azul);
+    color: var(--color-naranja);
+}
+
+.contenedor-tabla {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+} 
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.container-card{
+    height: 75vh;
+}
+
+.btn-pay{
+    background-color: var(--color-naranja);
+    color: var(--color-azul);
+}
+
+.btn-pay:hover{
     background-color: var(--color-azul);
     color: var(--color-naranja);
 }
