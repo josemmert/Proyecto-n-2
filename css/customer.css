@@ -128,21 +128,8 @@ footer li{
     border-radius: 20px;
 }
 
-@media(max-width:563px){
-    .img-footer{
-        width: 45px;
-        height: 45px;
-    }
-    
-}
 
-@media(max-width:400px){
-    .img-footer{
-        width: 35px;
-        height: 35px;
-    }
-    
-}
+
 
     
     .img-aboutUs{
@@ -196,7 +183,7 @@ footer li{
 
     }
 
-.container{
+.container-error{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,13 +217,6 @@ footer li{
     font-family: 'Staatliches', sans-serif;
 }
 
-article{
-    width: 80%;
-    color: #fff;
-    margin-bottom: 1rem;
-    font-family:'Staatliches', sans-serif;
-}
-
 .retorn{
 cursor: pointer;
 margin: 20px;
@@ -264,7 +244,7 @@ padding: 10px}
     background-color:  #f9c8be;
 }
 
-a {
+.a-error {
     text-decoration: none;
     color: black;
   }
