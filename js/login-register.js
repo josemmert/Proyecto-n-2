@@ -147,7 +147,7 @@ window.passwordRecover = function () {
     color: "#212121",
   }).then((result) => {
     if (result.isConfirmed) {
-      window.location.replace("../index.html");
+      window.location.replace("../pages/error404.html");
     }
   });
 };
