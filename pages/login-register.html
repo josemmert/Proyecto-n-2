@@ -7,8 +7,9 @@
     <meta name="description" content="Segundo Proyecto" />
     <meta name="keyboard" content="js" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/customer.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
@@ -19,6 +20,7 @@
       href="../img/TECHCODE Logo - Favicon - 32x32.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="../css/stylesLogReg.css" />
     <title>Techcode</title>
   </head>
   <body>
@@ -124,15 +126,33 @@
               required
             />
             <label for="passwordLogin" class="fs-5">Contraseña:</label>
-            <input
-              type="password"
-              name="passwordLogin"
-              id="passwordLogin"
-              placeholder="Ingresar la contraseña"
-              minlength="8"
-              maxlength="16"
-              class="form-control shadow"
-            />
+            <div class="input-container">
+              <input
+                type="password"
+                name="passwordLogin"
+                id="passwordLogin"
+                placeholder="Ingresar la contraseña"
+                minlength="8"
+                maxlength="16"
+                class="form-control shadow"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-eye iconL"
+                viewBox="0 0 16 16"
+                id="togglePasswordL"
+              >
+                <path
+                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                />
+                <path
+                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                />
+              </svg>
+            </div>
             <div>
               <input
                 type="submit"
@@ -230,31 +250,67 @@
               class="mb-3 form-control shadow"
             />
             <label for="passwordRegister" class="fs-5">Contraseña:</label>
-            <input
-              type="password"
-              name="passwordRegister"
-              id="passwordRegister"
-              placeholder="Ingresar contraseña"
-              minlength="8"
-              maxlength="16"
-              required
-              pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
-              class="mb-3 form-control shadow"
-            />
+            <div class="input-container">
+              <input
+                type="password"
+                name="passwordRegister"
+                id="passwordRegister"
+                placeholder="Ingresar contraseña"
+                minlength="8"
+                maxlength="16"
+                required
+                pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
+                class="mb-3 form-control shadow"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-eye icon"
+                viewBox="0 0 16 16"
+                id="togglePassword"
+              >
+                <path
+                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                />
+                <path
+                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                />
+              </svg>
+            </div>
             <label for="passwordRegister2" class="fs-5"
               >Repetir contraseña:</label
             >
-            <input
-              type="password"
-              name="passwordRegister2"
-              id="passwordRegister2"
-              placeholder="Ingresar contraseña"
-              minlength="8"
-              maxlength="16"
-              required
-              class="mb-3 form-control shadow"
-              pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
-            />
+            <div class="input-container">
+              <input
+                type="password"
+                name="passwordRegister2"
+                id="passwordRegister2"
+                placeholder="Ingresar contraseña"
+                minlength="8"
+                maxlength="16"
+                required
+                class="mb-3 form-control shadow"
+                pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-eye icon"
+                viewBox="0 0 16 16"
+                id="togglePassword2"
+              >
+                <path
+                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"
+                />
+                <path
+                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"
+                />
+              </svg>
+            </div>
             <p class="fst-italic h6">
               <small>
                 La contraseña debe tener entre 8 y 16 caracteres, al menos un
