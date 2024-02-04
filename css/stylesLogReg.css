@@ -5,18 +5,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px; /* Ajusta según sea necesario */
-  color: #555; /* Color del icono */
+  right: 10px;
+  color: #555;
   cursor: pointer;
-  display: none; /* Inicialmente oculto */
+  display: none;
 }
 
 .icon {
   position: absolute;
   top: 35%;
   transform: translateY(-50%);
-  right: 35px; /* Ajusta según sea necesario */
-  color: #555; /* Color del icono */
+  right: 35px;
+  color: #555;
   cursor: pointer;
-  display: none; /* Inicialmente oculto */
+  display: none;
 }
