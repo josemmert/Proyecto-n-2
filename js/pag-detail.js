@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="container pb-5">
                 <p class="fs-3 mb-5 text-product fw-bold">Características técnicas</p>
                 <div class="row">
-                    <div class="col-6 col-lg-4 mx-auto d-flex flex-column justify-content-between">
+                    <div class="col-lg-4 col-sm-12 mx-auto d-flex flex-column justify-content-between">
                         <div class="d-flex align-items-center">
                             <div class="col-3 col-lg-2 text-center">
                                 <i class="fas fa-mobile-screen fa-2x icon-product"></i>
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-4 mx-auto d-flex flex-column justify-content-between">
+                    <div class="col-lg-4 col-sm-12 mx-auto d-flex flex-column justify-content-between">
                         <div class="d-flex align-items-center">
                             <div class="col-3 col-lg-2 text-center">
                                 <i class="fas fa-hdd fa-2x icon-product"></i>
