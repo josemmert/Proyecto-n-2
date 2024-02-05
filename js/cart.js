@@ -34,7 +34,7 @@ function displayCart() {
       cartItem.classList.add("col-md-4");
 
       cartItem.innerHTML = `
-        <div class="card">
+        <div class="card mb-3">
           <img src="${product.urlImg}" class="card-img-top mx-auto" alt="${product.modelo}" style="width: 200px; height: 200px; object-fit: cover;">
           <div class="card-body">
             <h5 class="card-title title-product fw-bold">${product.modelo}</h5>
