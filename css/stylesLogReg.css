@@ -1,161 +1,3 @@
-.navFoot-color {
-  background-color: #c1d1fc;
-}
-
-.img-footer {
-  width: 70px;
-  height: 70px;
-}
-
-.custom-text {
-  color: #1d215e;
-}
-
-.custom-text:hover {
-  color: #fff;
-}
-
-.name-text-close {
-  color: #a8befa;
-}
-
-.name-text-open {
-  color: #fd972b;
-}
-
-.text-card {
-  color: #1d215e;
-}
-
-@media (max-width: 563px) {
-  .img-footer {
-    width: 45px;
-    height: 45px;
-  }
-
-  .img-log {
-    width: 150px;
-  }
-}
-
-@media (max-width: 280px) {
-  .img-footer {
-    width: 35px;
-    height: 35px;
-  }
-
-  .img-log {
-    width: 100px;
-  }
-}
-
-.img-cart {
-  width: 30px;
-  height: 30px;
-}
-
-.navbar-toggler-icon1 {
-  cursor: pointer !important;
-}
-
-.box-titles {
-  background-color: #1d215e;
-  color: #fff;
-  margin: 20px;
-  padding: 20px;
-  size: 20px;
-  text-align: center;
-}
-
-.box-titles {
-  background-color: #001550;
-  color: #c1d1fc;
-  padding: 20px;
-  text-align: center;
-}
-.box-form {
-  background-color: #254e95;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.containers {
-  background-color: #1d215e;
-}
-
-.bi-google:hover {
-  fill: #f74925;
-}
-
-.bi-facebook:hover {
-  fill: #38529a;
-}
-
-footer li {
-  text-decoration: none;
-  list-style: none;
-}
-
-.mayusculas {
-  text-transform: uppercase;
-}
-
-@media (max-width: 563px) {
-  .img-footer {
-    width: 45px;
-    height: 45px;
-  }
-}
-
-@media (max-width: 400px) {
-  .img-footer {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-@media (min-width: 1120px) {
-  .img-aboutUs {
-    width: 250px;
-    border-radius: 20px;
-  }
-}
-
-@media (max-width: 1120px) {
-  .img-aboutUs {
-    width: 230px;
-    border-radius: 20px;
-  }
-}
-
-@media (max-width: 670px) {
-  .img-aboutUs {
-    width: 200px;
-    border-radius: 20px;
-  }
-}
-
-@media (max-width: 572px) {
-  .img-aboutUs {
-    width: 280px;
-    border-radius: 20px;
-  }
-}
-@media (max-width: 340px) {
-  .img-aboutUs {
-    width: 200px;
-    border-radius: 20px;
-  }
-}
-
-@media (max-width: 280px) {
-  .img-aboutUs {
-    width: 220px;
-    border-radius: 20px;
-  }
-}
-
 .input-container {
   position: relative;
 }
@@ -163,18 +5,18 @@ footer li {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px; /* Ajusta según sea necesario */
-  color: #555; /* Color del icono */
+  right: 10px;
+  color: #555;
   cursor: pointer;
-  display: none; /* Inicialmente oculto */
+  display: none;
 }
 
 .icon {
   position: absolute;
   top: 35%;
   transform: translateY(-50%);
-  right: 35px; /* Ajusta según sea necesario */
-  color: #555; /* Color del icono */
+  right: 35px;
+  color: #555;
   cursor: pointer;
-  display: none; /* Inicialmente oculto */
+  display: none;
 }
