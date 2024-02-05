@@ -1,163 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --color-azul: #1D215E;
-    --color-celeste: #c1d1fc;
-    --color-naranja: #FD972B;
-    --color-cremita: #fff8ed;
+:root {
+  --color-azul: #1d215e;
+  --color-celeste: #c1d1fc;
+  --color-naranja: #fd972b;
+  --color-cremita: #fff8ed;
 }
 
-header, footer{
-    font-family: 'Staatliches', sans-serif;
-    
+header,
+footer {
+  font-family: "Staatliches", sans-serif;
 }
 
-.imgcarrusel{
-    height: 550px;
+.imgcarrusel {
+  height: 550px;
 }
 
 @media (max-width: 865px) {
   .imgcarrusel {
     height: 260px;
   }
-  
-
 }
 @media (max-width: 350px) {
   .imgcarrusel {
     height: 150px;
   }
-  
 }
 
-.titleoff{
-    display: flex;
-    justify-content: center;
-    width: 300px;
-    border-bottom: 3px solid var(--color-naranja);
-    border-top: 3px solid var(--color-celeste);
-    background: linear-gradient(to bottom, #c1d1fc, #FD972B); /* Tu gradiente de color */
-    -webkit-background-clip: text; /* Propiedad específica de WebKit para aplicar el fondo al texto */
-    background-clip: text;
-    color: transparent; /* Hace que el texto sea transparente */
-    border-radius: 15px;
-    font-size: xx-large;
-    font-weight: bold;
-    
+.titleoff {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  border-bottom: 3px solid var(--color-naranja);
+  border-top: 3px solid var(--color-celeste);
+  background: linear-gradient(to bottom, #c1d1fc, #fd972b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-radius: 15px;
+  font-size: xx-large;
+  font-weight: bold;
 }
 
-
-.swiper{
-    width: 100%;
-    padding: 50px 0 50px 0;
+.swiper {
+  width: 100%;
+  padding: 50px 0 50px 0;
 }
 
-.swiper-slide{
-    width: 290px;
-    height: auto;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-    background-color: var(--color-naranja);
-    padding: 40px;
-    text-align: center;
-    border-radius: 15px;
+.swiper-slide {
+  width: 290px;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background-color: var(--color-naranja);
+  padding: 40px;
+  text-align: center;
+  border-radius: 15px;
 }
 
-.product-content{
-    display: flex;
-    justify-content: space-between;
+.product-content {
+  display: flex;
+  justify-content: space-between;
 }
 
-.product-txt{
-    flex-basis: 50%;
-    text-align: left;
+.product-txt {
+  flex-basis: 50%;
+  text-align: left;
 }
 
-.product-txt span{
-    font-size: 25px;
-    color: #ffffff;
-    font-weight: bold;
+.product-txt span {
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .product-txt h3 {
-    font-size: 20px;
-    color: var(--color-azul);
-    text-transform: uppercase;
+  font-size: 20px;
+  color: var(--color-azul);
+  text-transform: uppercase;
 }
 
-.product-txt p{
-    font-size: 14px;
-    color: var(--color-azul);
+.product-txt p {
+  font-size: 14px;
+  color: var(--color-azul);
 }
 
-.product-img{
-    flex-basis: 50%;
-    text-align: right;
+.product-img {
+  flex-basis: 50%;
+  text-align: right;
 }
 
-.product-img img{
-    width: 120px;
-    border-radius: 15px;
-    margin-left: 10px;
-    border: 10px transparent var(--color-naranja);
+.product-img img {
+  width: 120px;
+  border-radius: 15px;
+  margin-left: 10px;
+  border: 10px transparent var(--color-naranja);
 }
 
 .btn-1 {
-    display: inline-block;
-    padding: 13px 55px;
-    border: 1px solid #ffffff;
-    border-radius: 25px;
-    color: #ffffff;
-    text-decoration: none;
-    margin-top: 50px;
+  display: inline-block;
+  padding: 13px 55px;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 50px;
 }
 
-.btn-1:hover{
-    background-color: var(--color-cremita);
-    color: var(--color-azul);
-    border: 1px solid var(--color-azul);
+.btn-1:hover {
+  background-color: var(--color-cremita);
+  color: var(--color-azul);
+  border: 1px solid var(--color-azul);
 }
 
 .sales {
-    margin: 25px 0;
-    height: 350px;
-    border-radius: 15px;
+  margin: 25px 0;
+  height: 350px;
+  border-radius: 15px;
 }
 
 @media (max-width: 1120px) {
-    .sales {
-      display: none;
-    }
-}
-
-
-.filtro{
+  .sales {
     display: none;
-}
-  
-
-
-.btn-2 {
-    border: 1px solid #ffffff;
-    border-radius: 25px;
-    color: #ffffff;
-    background-color: #092361;
-    padding: 5px 30px;
+  }
 }
 
-.btn-2:hover{
-    background-color: #254e95;
-    color: #ffffff;
+.filtro {
+  display: none;
 }
 
 .contact-form {
-    max-width: 400px;
-    margin: 0 auto;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-error {
+  color: red;
+  font-size: 80%;
 }
 
 #cart {
@@ -167,125 +151,99 @@ header, footer{
   margin-bottom: 20px;
 }
 
-
-
-/* ---------------test----------------- */
-
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
 }
 
 .producto {
-    width: 300px;
-    max-width: 300px;
-    height: 300px;
-    max-height: 300px;
-    margin: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 300px;
+  max-width: 300px;
+  height: 300px;
+  max-height: 300px;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .producto:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .producto img {
-    width: 100%;
-    height: auto;
-    max-height: 150px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: cover;
 }
 
 .producto h3 {
-    padding: 10px;
-    margin: 0;
-    text-decoration: none;
-    color: black;
-    font-size: medium;
+  padding: 10px;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+  font-size: medium;
 }
 
-.boton-detalle {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    background-color: var(--color-naranja);
-    color: white;
-    text-decoration: none;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.boton-detalle:hover {
-    background-color: var(--color-cremita);
-    color: black;
-    border: solid 1.5px var(--color-naranja) ;
-}
-
-
-.title-brand, 
+.title-brand,
 .icon-product,
-.number-product{
-    color: var(--color-naranja);
+.number-product {
+  color: var(--color-naranja);
 }
 
 .text-product,
-.title-product{
-    color: var(--color-azul);
+.title-product {
+  color: var(--color-azul);
 }
 
-.btn-custom-add{
-    background-color: var(--color-naranja);
-    color: var(--color-azul);
+.btn-custom-add {
+  background-color: var(--color-naranja);
+  color: var(--color-azul);
 }
 
-.btn-custom-add:hover{
-    background-color: var(--color-azul);
-    color: var(--color-naranja);
+.btn-custom-add:hover {
+  background-color: var(--color-azul);
+  color: var(--color-naranja);
 }
 
 .contenedor-tabla {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-} 
+  border-collapse: collapse;
+  width: 100%;
+}
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
 
 th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
-.container-card{
-    height: 75vh;
+.container-card {
+  height: 75vh;
 }
 
-.btn-pay{
-    background-color: var(--color-naranja);
-    color: var(--color-azul);
+.btn-pay {
+  background-color: var(--color-naranja);
+  color: var(--color-azul);
 }
 
-.btn-pay:hover{
-    background-color: var(--color-azul);
-    color: var(--color-naranja);
+.btn-pay:hover {
+  background-color: var(--color-azul);
+  color: var(--color-naranja);
 }
-
-
