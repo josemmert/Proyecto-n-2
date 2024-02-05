@@ -1,6 +1,6 @@
 import{
   CodigoAleatorio
-} from "./hellpers.js"
+} from "./hellpersAdmin.js"
 
 
 function CreaPrimerosProductos(){

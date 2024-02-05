@@ -6,7 +6,7 @@ import {
   ValidarInputUrlImg,
   ValidarInputVarios,
   ValidarTodo,
-} from "./hellpers.js";
+} from "./hellpersAdmin.js";
 
 
 
