@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap');
+
+
+main {
+    margin-top: 80px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+@media (max-width: 565px) {
+    main {
+      margin-top: 70px;
+    }
+    
+}
+
+@media (max-width: 280px) {
+    main {
+      margin-top: 50px;
+    }
+    
+  }
+
+.navFoot-color{
+    background-color: #c1d1fc;
+    }
+
+
+.img-footer{
+    width: 70px;
+    height: 70px;
+}
+
+.custom-text{
+    color: #1D215E;
+}
+
+.custom-text:hover{
+    color: #fff;
+}
+
+
+.name-text-close{
+    color: #a8befa;
+}
+
+.name-text-open{
+    color: #FD972B;
+}
+
+.text-card{
+    color: #1D215E;
+}
+
+@media(max-width:563px){
+    .img-footer{
+        width: 45px;
+        height: 45px;
+    }
+    
+    .img-log{
+        width: 150px;
+        
+}
+
+}
+
+@media(max-width:280px){
+    .img-footer{
+        width: 35px;
+        height: 35px;
+    }
+
+    .img-log{
+        width: 100px;
+        }
+}
+
+
+.img-cart {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-toggler-icon1 {
+  cursor: pointer !important;
+}
+
+
+.box-titles{
+    background-color: #001550;
+    color: #c1d1fc;
+    padding: 20px;
+    text-align: center;
+}
+.box-form {
+  background-color: #001550;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.containers {
+  background-color: #1D215E;
+}
+
+.bi-google:hover {
+  fill: #f74925;
+
+}
+
+.bi-facebook:hover {
+  fill: #38529a;
+}
+
+footer li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.img-aboutUs-open{
+    width:100px;
+    border-radius: 20px;
+}
+
+
+
+
+    
+    .img-aboutUs{
+        width: 250px;
+        border-radius: 20px;
+    }
+
+    @media(max-width:1120px){
+        .img-aboutUs{
+            width: 230px;
+            border-radius: 20px;
+        }
+    
+    }
+
+    @media(max-width:670px){
+        .img-aboutUs{
+            width: 200px;
+            border-radius: 20px;
+        }
+    }
+
+    @media(max-width:572px){
+        .img-aboutUs{
+            width: 280px;
+            border-radius: 20px;
+        }
+    }
+    @media(max-width:340px){
+        .img-aboutUs{
+            width: 200px;
+            border-radius: 20px;
+        }
+    }
+
+
+    @media(max-width:280px){
+        .img-aboutUs{
+            width: 220px;
+            border-radius: 20px;
+        }
+    }
+
+    .img-git{
+        width: 40px;
+        height: 40px;
+    }
+
+   .main-error {
+        background: linear-gradient(to right, #c0c4fb, #4675f4);
+
+    }
+
+.container-error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.error{
+    color: #f74925;
+    font-size: 10rem;
+    text-align: center;
+    font-family: 'Staatliches', sans-serif;
+    
+}
+
+
+.error-text{
+    color: #f74925;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Staatliches', sans-serif;
+
+}
+
+
+
+.error-text-p{
+    color: #f74925;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Staatliches', sans-serif;
+}
+
+.retorn{
+cursor: pointer;
+margin: 20px;
+font-weight: bold;
+border-radius: 20px;
+text-transform: uppercase;
+transition: all 0.3s linear;
+font-family:'Staatliches', sans-serif;
+border:  3px solid #f74925;
+padding: 10px}
+
+.retorn:hover{
+    color:  #f57c64;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.active{
+    color:  #f57c64;
+    background-color: white;
+}
+
+.active:hover{
+    color:#f57c64;
+    background-color:  #f9c8be;
+}
+
+.a-error {
+    text-decoration: none;
+    color: black;
+  }
+
