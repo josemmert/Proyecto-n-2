@@ -31,11 +31,43 @@ function CreaPrimerosProductos() {
         "Diseño elegante y protección contra el agua - Experimentá un teléfono cómodo para la mano, con terminaciones en cuero vegano y protegido contra el agua IP681.",
       precio: "1.099.999,00",
       urlImg:
-        "https://http2.mlstatic.com/D_NQ_NP_838463-MLA72065393348_102023-O.webp",
+        "https://images.ctfassets.net/weuwbjv1v9lc/4spLoU8HAzkQfAbmDKCDNE/09ef5e985d38737ac2a970962d1bdf3a/1.webp",
       stock: "5",
+    };
+    const productoNuevo3 = {
+      codigo: CodigoAleatorio(),
+      marca: "Xiaomi",
+      modelo: "Redmi Note 11",
+      pantalla: '6.4"',
+      memoria: "4 GB",
+      almacenamiento: "128 GB",
+      camara: "50MP",
+      descripcion:
+        "Perfección con estética:El nuevo Redmi Note 11 se distingue por un diseño moderno con un marco plano y un carácter minimalista Pantalla AMOLED Sumérgete en el mundo maravilloso: La pantalla retroiluminada proporciona el más alto brillo, contraste, color y resolución. La vida en AMOLED 90 Hz Snapdragon® 680 Pantalla AMOLED DotDisplay de 90 Hz Carga rápida Pro de 33 W. Pantalla táctil y visualización impecable Con el Redmi Note 11 Disfruta de tus contenidos con una tasa de refresco de 90 Hz fluida y sin interrupciones. Navega sin problemas por tus redes sociales o experimenta un modo de juego potente y con gran capacidad de respuesta. Rendimiento integral, listo para cualquier reto Este procesador no solo es rápido y potente, sino que además funciona con el proceso de 6 nm de bajo consumo para ofrecer un alto rendimiento a la vez que mejora la duración de la batería. Velocidades de carga más rápidas con UFS 2.2 y escritura acelerada gracias a Write Booster, que ofrece funciones eficaces de instalación de aplicaciones, iniciación y almacenamiento en caché de archivos a alta velocidad, así como lectura y escritura de archivos de gran tamaño.",
+      precio: "361.299,00",
+      urlImg:
+        "https://surimportacion.com.ar/wp-content/uploads/2023/03/starbluenote11redmi1.png",
+      stock: "10",
+    };
+    const productoNuevo4 = {
+      codigo: CodigoAleatorio(),
+      marca: "Samsung",
+      modelo: "Galaxy Z Flip5",
+      pantalla: '6.6"',
+      memoria: "8 GB",
+      almacenamiento: "512 GB",
+      camara: "12+12 MP",
+      descripcion:
+        "La pantalla externa más grande de un Galaxy Z Flip hasta ahora El Galaxy Z Flip5 presenta por primera vez la Flex Window de 3,4 pulgadas creado para la autoexpresión. Compacto y atrapante desde todos los ángulos, este plegable es tan versátil como portátil.*Imagen simulada solo con fines ilustrativos. La interfaz de usuario real puede diferir. Medido diagonalmente, el tamaño de la pantalla de la cubierta del Galaxy Z Flip5 es de 3,4 pulgadas en forma rectangular completa; el área visible real es aproximadamente el 95 % del área rectangular completa debido a las esquinas redondeadas y al recorte inferior.",
+      precio: "1.799.999,00",
+      urlImg:
+        "https://multipoint.com.ar/Image/0/750_750-h14.jpg",
+      stock: "15",
     };
     listaProductos.push(productoNuevo);
     listaProductos.push(productoNuevo2);
+    listaProductos.push(productoNuevo3);
+    listaProductos.push(productoNuevo4);
     localStorage.setItem("productos", JSON.stringify(listaProductos));
     console.log(listaProductos);
     arrayProductos = JSON.parse(localStorage.getItem("productos")) || [];
